@@ -1,7 +1,6 @@
 <template>
-
-  <v-app id="inspire" style="background-image: url( 'https://static-cse.canva.com/blob/142372/Patterns-3-03.3c9174de.jpg');">
-    <v-main>
+  <v-app id="inspire" style="background-image: url( 'https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v748-toon-34_1_1.jpg?w=1300&dpr=1&fit=default&crop=default&q=80&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=4938b2e4c34bb2b4c7187804b0275f9e');background-size: cover;">
+    <v-main  class="mt-n12">
       <v-container class="fill-height" fluid>
         <v-row align="center" justify="center">
           <v-col cols="12" sm="8" md="4">
@@ -68,6 +67,7 @@
 </template>
 
 <script>
+import somthing from '../assets/square.png'
 export default {
   props: {
     source: String,
