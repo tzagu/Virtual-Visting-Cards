@@ -30,7 +30,7 @@
 			<plugin>
 				<groupId>org.eluder.coveralls</groupId>
 				<artifactId>coveralls-maven-plugin</artifactId>
-<!--				<version>${build-plugin.coveralls.version}</version>-->
+				<version>4.3.0</version>
 			</plugin>
 		</plugins>
 	</build>

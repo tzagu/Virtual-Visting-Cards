@@ -9,7 +9,7 @@ import java.util.List;
 
 @Entity
 @Table
-public class Person{
+public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,12 +28,14 @@ public class Person{
     private String landLine;
 
     @Column
-    @Temporal(TemporalType.DATE)
     @CreatedDate
     private Date joinedDate;
 
     @Column
     private String email;
+
+    @Column
+    private String password;
 
     @Column
     private String address;
@@ -59,11 +61,12 @@ public class Person{
     public Person() {
     }
 
-    public Person(String name, String mobile1, String mobile2, String email, String landLine, Date joinedDate, String address, int dealCount, String status) {
+    public Person(String name, String mobile1, String mobile2, String email, String landLine, Date joinedDate, String address, int dealCount, String status, String password) {
         this.name = name;
         this.mobile1 = mobile1;
         this.mobile2 = mobile2;
         this.email = email;
+        this.password = password;
         this.landLine = landLine;
         this.joinedDate = joinedDate;
         this.address = address;
@@ -103,11 +106,11 @@ public class Person{
         this.mobile2 = mobile2;
     }
 
-    public String getLandline(){
+    public String getLandline() {
         return landLine;
     }
 
-    public void setLandline(String landline){
+    public void setLandline(String landline) {
         this.landLine = landline;
     }
 
@@ -119,27 +122,75 @@ public class Person{
         this.email = email;
     }
 
-    public String getAddress(){
+    public String getLandLine() {
+        return landLine;
+    }
+
+    public void setLandLine(String landLine) {
+        this.landLine = landLine;
+    }
+
+    public Date getJoinedDate() {
+        return joinedDate;
+    }
+
+    public void setJoinedDate(Date joinedDate) {
+        this.joinedDate = joinedDate;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public List<ItemPerson> getItemPersonList() {
+        return itemPersonList;
+    }
+
+    public void setItemPersonList(List<ItemPerson> itemPersonList) {
+        this.itemPersonList = itemPersonList;
+    }
+
+    public List<Deals> getPerson1() {
+        return person1;
+    }
+
+    public void setPerson1(List<Deals> person1) {
+        this.person1 = person1;
+    }
+
+    public List<Deals> getPerson2() {
+        return person2;
+    }
+
+    public void setPerson2(List<Deals> person2) {
+        this.person2 = person2;
+    }
+
+    public String getAddress() {
         return address;
     }
 
-    public void setAddress(String address){
+    public void setAddress(String address) {
         this.address = address;
     }
 
-    public int getDealCount(){
+    public int getDealCount() {
         return dealCount;
     }
 
-    public void setDealCount(int dealCount){
+    public void setDealCount(int dealCount) {
         this.dealCount = dealCount;
     }
 
-    public String getStatus(){
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(String status){
+    public void setStatus(String status) {
         this.status = status;
     }
 

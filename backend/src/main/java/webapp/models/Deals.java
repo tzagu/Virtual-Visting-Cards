@@ -14,7 +14,6 @@ public class Deals {
     private int id;
 
     @Column
-    @Temporal(TemporalType.TIMESTAMP)
     @CreationTimestamp
     private Date date;
 
