@@ -13,7 +13,7 @@
                 </v-tooltip>
               </v-toolbar>
               <v-card-text>
-                <v-form>
+                <v-form v-on:submit="signUp">
                   <v-text-field
                   class="px-6 mt-6"
                     v-model="email"
@@ -24,6 +24,7 @@
                   ></v-text-field>
 
                   <v-text-field
+                  v-model="password"
                   class="px-6"
                     id="password"
                     label="Password"
@@ -66,6 +67,8 @@
   </v-app>
 </template>
 
+
+
 <script>
 export default {
   props: {
@@ -73,7 +76,10 @@ export default {
   },
 
   data: () => ({
-    email: "",
+    all: null,
+    email: '',
+    password: '',
+
     emailRules: [
       (v) => !!v || "E-mail is required",
       (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
@@ -81,12 +87,29 @@ export default {
     checkbox: false,
   }),
 
+  // mounted(){
+  //   this.findAll();
+  // },
+  
   methods: {
     validate() {
       this.$refs.form.validate();
     },
+
+    postPerson: function (event) {
+      if(this.email == '' || this.email == null){
+        axios.post("api/person/all", {
+          email: this.email,
+        })
+        .then
+      }
+
+    }
   },
 };
+
+
+
 </script>
 <style scoped>
   .blah{
