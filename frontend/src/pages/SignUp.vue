@@ -53,7 +53,7 @@
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn class="mr-6 mb-3 white--text" color="#554971" @click="validate">Signup</v-btn>
+                <v-btn class="mr-6 mb-3 white--text" color="#554971" @click="postPerson">Signup</v-btn>
               </v-card-actions>
             </v-card>
             <div class="mt-8">
@@ -101,9 +101,22 @@ export default {
         axios.post("api/person/all", {
           email: this.email,
         })
-        .then
+        .then(savedPerson => {
+          this.all.push(savedPerson.data);
+          this.email = '';
+          this.password = '';
+        })
+      }else{
+        axios.post("api/person/all", {
+          "email": this.email,
+          "password": this.password
+        })
+        .then(savedPerson => {
+          this.email = '';
+          this.password = '';
+        })
       }
-
+      console.log("record saved")
     }
   },
 };
