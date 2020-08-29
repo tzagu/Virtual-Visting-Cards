@@ -1,5 +1,5 @@
 <template>
-  <v-app id="inspire" class="blah">
+  <v-app id="inspire">
     <v-main>
       <v-container class="fill-height" fluid>
         <v-row align="center" justify="center">
@@ -96,7 +96,7 @@ export default {
       this.$refs.form.validate();
     },
 
-    postPerson: function (event) {
+    signUp: function (event) {
       if(this.email == '' || this.email == null){
         axios.post("api/person/all", {
           email: this.email,
@@ -112,8 +112,5 @@ export default {
 
 </script>
 <style scoped>
-  .blah{
-    background-image: url( "../assets/square.jpg");
-    background-size: cover;
-  }
+
 </style>
