@@ -61,18 +61,24 @@ public class Person {
     public Person() {
     }
 
-    public Person(String name, String mobile1, String mobile2, String email, String landLine, Date joinedDate, String address, int dealCount, String status, String password) {
-        this.name = name;
-        this.mobile1 = mobile1;
-        this.mobile2 = mobile2;
+    public Person(String email, String password) {
+        super();
         this.email = email;
         this.password = password;
-        this.landLine = landLine;
-        this.joinedDate = joinedDate;
-        this.address = address;
-        this.dealCount = dealCount;
-        this.status = status;
     }
+
+//    public Person(String name, String mobile1, String mobile2, String email, String landLine, Date joinedDate, String address, int dealCount, String status, String password) {
+//        this.name = name;
+//        this.mobile1 = mobile1;
+//        this.mobile2 = mobile2;
+//        this.email = email;
+//        this.password = password;
+//        this.landLine = landLine;
+//        this.joinedDate = joinedDate;
+//        this.address = address;
+//        this.dealCount = dealCount;
+//        this.status = status;
+//    }
 
     public int getId() {
         return id;
