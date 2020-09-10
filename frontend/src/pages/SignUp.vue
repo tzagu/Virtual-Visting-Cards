@@ -121,7 +121,7 @@ export default {
         "welcome to the one and only business platform in sri lanka"
       );
       axios
-        .post('/api/person/all', {
+        .post('/saveperson', {
           email: this.email,
           password: this.password,
         })

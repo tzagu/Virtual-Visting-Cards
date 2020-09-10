@@ -1,4 +1,4 @@
-package webapp.models;
+package com.example.backend.models;
 
 import org.springframework.data.annotation.CreatedDate;
 

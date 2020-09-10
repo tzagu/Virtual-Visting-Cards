@@ -1,4 +1,4 @@
-package webapp.controllers;
+package com.example.backend.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 public class PersonController {
 
-    @GetMapping("/")
+    @GetMapping("/idk")
     public String list(){
         return "person";
     }

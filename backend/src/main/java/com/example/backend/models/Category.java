@@ -1,4 +1,4 @@
-package webapp.models;
+package com.example.backend.models;
 
 import javax.persistence.*;
 import java.util.ArrayList;
