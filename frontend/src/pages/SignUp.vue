@@ -93,32 +93,9 @@ export default {
       this.$refs.form.validate();
     },
 
-    // signUp: function (event) {
-    //   if(this.email == '' || this.email == null){
-    //     this.$axios.post("api/person/all", {
-    //       email: this.email,
-    //     })
-    //     .then(savedPerson => {
-    //       this.all.push(savedPerson.data);
-    //       this.email = '';
-    //       this.password = '';
-    //     })
-    //   }else{
-    //     this.$axios.post("api/person/all", {
-    //       "email": this.email,
-    //       "password": this.password
-    //     })
-    //     .then(savedPerson => {
-    //       this.email = '';
-    //       this.password = '';
-    //     })
-    //   }
-    //   console.log("record saved")
-    // }
-
     signUp() {
       console.log(
-        "welcome to the one and only business platform in sri lanka"
+        "signup method initiated"
       );
       axios
         .post('/saveperson', {
