@@ -22,20 +22,34 @@ public class ItemPerson {
     private int quantity;
 
     @Column
-    private int price;
+    private float price;
 
-    @OneToMany(cascade = CascadeType.ALL, targetEntity = Deals.class)
+    @OneToMany(targetEntity = Deals.class)
     @JoinColumn(name = "itemPersonId", referencedColumnName = "id")
     private List<Deals> deals = new ArrayList<>();
+
+    @ManyToOne
+    @JoinColumn(name = "itemId")
+    private Item item;
+
+
+    //m20 unidi
+//    @ManyToOne(optional = false)
+//    @JoinColumn(name="UNIVERSITY_ID")
+//    private University university;
 
     public ItemPerson() {
     }
 
-    public ItemPerson(String brand, String deliverTo, int quantity, int price) {
+    public ItemPerson(int id, String brand, String deliverTo, int quantity, float price, List<Deals> deals, Item item)
+    {
+        this.id = id;
         this.brand = brand;
         this.deliverTo = deliverTo;
         this.quantity = quantity;
         this.price = price;
+        this.deals = deals;
+        this.item = item;
     }
 
     public int getId() {
@@ -70,11 +84,11 @@ public class ItemPerson {
         this.quantity = quantity;
     }
 
-    public int getPrice() {
+    public float getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
@@ -84,5 +98,13 @@ public class ItemPerson {
 
     public void setDeals(List<Deals> deals) {
         this.deals = deals;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
     }
 }

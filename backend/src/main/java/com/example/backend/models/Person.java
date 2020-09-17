@@ -67,19 +67,6 @@ public class Person {
         this.password = password;
     }
 
-//    public Person(String name, String mobile1, String mobile2, String email, String landLine, Date joinedDate, String address, int dealCount, String status, String password) {
-//        this.name = name;
-//        this.mobile1 = mobile1;
-//        this.mobile2 = mobile2;
-//        this.email = email;
-//        this.password = password;
-//        this.landLine = landLine;
-//        this.joinedDate = joinedDate;
-//        this.address = address;
-//        this.dealCount = dealCount;
-//        this.status = status;
-//    }
-
     public int getId() {
         return id;
     }
@@ -199,5 +186,7 @@ public class Person {
     public void setStatus(String status) {
         this.status = status;
     }
+
+
 
 }

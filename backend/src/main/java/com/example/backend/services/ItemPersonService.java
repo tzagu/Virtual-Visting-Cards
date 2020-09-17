@@ -1,5 +1,6 @@
 package com.example.backend.services;
 
+import com.example.backend.models.Item;
 import com.example.backend.models.ItemPerson;
 import com.example.backend.repositories.ItemPersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,5 +27,10 @@ public class ItemPersonService {
 
     public Optional<ItemPerson> findById(int id){
         return itemPersonRepository.findById(id);
+    }
+
+    public ItemPerson save(ItemPerson itemPerson){
+        itemPerson = itemPersonRepository.save(itemPerson);
+        return itemPerson;
     }
 }

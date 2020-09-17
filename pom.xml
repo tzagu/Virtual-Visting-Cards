@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>SpringBoot-VueJs</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SprinBoot-VueJs</name>
+	<name>SpringBoot-VueJs</name>
 	<description>BtoB-parent</description>
 	<packaging>pom</packaging>
 

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SPLITTER_PROPORTION" value="0.43310657" />
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="AutomaticModuleUnloader">
+    <loaded-modules>
+      <module name="SpringBoot-VueJs" />
+      <module name="backend" />
+    </loaded-modules>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8bc1d272-ce2b-400e-9617-cef7eef9282f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/SignUp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/SignUp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.d8efb00238e813ad81ce9dd455630be0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.d8efb00238e813ad81ce9dd455630be0.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.87665bf1fb83bab8d0b6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.87665bf1fb83bab8d0b6.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/vendor.1462e44698e01615c29b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/vendor.1462e44698e01615c29b.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/frontend-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/frontend-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="usePluginRegistry" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1gS9ypoQXWFm6TgXry3cgae5Uz7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.backend" />
+      <recent name="com" />
+      <recent name="" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8bc1d272-ce2b-400e-9617-cef7eef9282f" name="Default Changelist" comment="" />
+      <created>1598097386299</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598097386299</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="616" y="235" width="732" height="644" key="#Inspections" timestamp="1599596893205">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="616" y="235" width="732" height="644" key="#Inspections/54.27.1866.1053@54.27.1866.1053" timestamp="1599596893205" />
+    <state x="470" y="131" width="1024" height="852" key="#Project_Structure" timestamp="1599525271317">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="470" y="131" width="1024" height="852" key="#Project_Structure/54.27.1866.1053@54.27.1866.1053" timestamp="1599525271317" />
+    <state x="683" y="307" width="598" height="499" key="#Servers" timestamp="1599488361454">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="683" y="307" width="598" height="499" key="#Servers/54.27.1866.1053@54.27.1866.1053" timestamp="1599488361454" />
+    <state x="678" y="355" width="608" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598162891086">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="678" y="355" width="608" height="403" key="#com.intellij.fileTypes.FileTypeChooser/54.27.1866.1053@54.27.1866.1053" timestamp="1598162891086" />
+    <state x="795" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1599770661403">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="795" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/54.27.1866.1053@54.27.1866.1053" timestamp="1599770661403" />
+    <state x="745" y="335" width="524" height="451" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1599727480160">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="745" y="335" width="524" height="451" key="#com.intellij.ide.util.PackageChooserDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1599727480160" />
+    <state x="628" y="223" width="708" height="668" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1599527771613">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="628" y="223" width="708" height="668" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1599527771613" />
+    <state x="531" y="478" width="973" height="158" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1599728357318">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="531" y="478" width="973" height="158" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1599728357318" />
+    <state x="740" y="421" width="494" height="279" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1599699770498">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="740" y="421" width="494" height="279" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/54.27.1866.1053@54.27.1866.1053" timestamp="1599699770498" />
+    <state x="740" y="435" width="544" height="244" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1599728359599">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="740" y="435" width="544" height="244" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/54.27.1866.1053@54.27.1866.1053" timestamp="1599728359599" />
+    <state x="723" y="444" width="508" height="301" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1599039918136">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="723" y="444" width="508" height="301" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/54.27.1866.1053@54.27.1866.1053" timestamp="1599039918136" />
+    <state x="770" y="311" width="780" height="691" key="FileChooserDialogImpl" timestamp="1599594935726">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="770" y="311" width="780" height="691" key="FileChooserDialogImpl/54.27.1866.1053@54.27.1866.1053" timestamp="1599594935726" />
+    <state x="551" y="371" width="924" height="691" key="Maven.ArtifactSearchDialog" timestamp="1598109832906">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="551" y="371" width="924" height="691" key="Maven.ArtifactSearchDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1598109832906" />
+    <state x="90" y="181" width="1635" height="737" key="SettingsEditor" timestamp="1599528515669">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="90" y="181" width="1635" height="737" key="SettingsEditor/54.27.1866.1053@54.27.1866.1053" timestamp="1599528515669" />
+    <state x="778" y="412" width="417" height="289" key="XPathView.InputDialog.DIMENSION_SERVICE_KEY.SIMPLE" timestamp="1599483800267">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="778" y="412" width="417" height="289" key="XPathView.InputDialog.DIMENSION_SERVICE_KEY.SIMPLE/54.27.1866.1053@54.27.1866.1053" timestamp="1599483800267" />
+    <state x="678" y="162" width="677" height="783" key="find.popup" timestamp="1598114765273">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="678" y="162" width="677" height="783" key="find.popup/54.27.1866.1053@54.27.1866.1053" timestamp="1598114765273" />
+  </component>
+  <component name="XPathView.XPathProjectComponent">
+    <history />
+    <find-history />
+  </component>
+</project>
