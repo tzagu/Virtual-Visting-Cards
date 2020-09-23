@@ -32,12 +32,6 @@ public class ItemPerson {
     @JoinColumn(name = "itemId")
     private Item item;
 
-
-    //m20 unidi
-//    @ManyToOne(optional = false)
-//    @JoinColumn(name="UNIVERSITY_ID")
-//    private University university;
-
     public ItemPerson() {
     }
 

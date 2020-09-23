@@ -18,10 +18,6 @@ public class Item{
     @Column
     private String name;
 
-
-//    @OneToMany (mappedBy = "item",orphanRemoval = true )
-//    private List<ItemPerson> itemPersonList = new ArrayList<ItemPerson>();
-
     public Item() {
     }
 
@@ -47,11 +43,4 @@ public class Item{
         this.name = name;
     }
 
-//    public List<ItemPerson> getItemPersonList() {
-//        return itemPersonList;
-//    }
-//
-//    public void setItemPersonList(List<ItemPerson> itemPersonList) {
-//        this.itemPersonList = itemPersonList;
-//    }
 }

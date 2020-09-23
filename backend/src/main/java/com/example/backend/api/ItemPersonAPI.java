@@ -26,7 +26,7 @@ public class ItemPersonAPI {
     }
 
     @GetMapping("/itemperson/{id}")
-    public ResponseEntity<Optional<ItemPerson>> findById(int id) {
+    public ResponseEntity<Optional<ItemPerson>> findById(@PathVariable int id) {
         return ResponseEntity.ok(itemPersonService.findById(id));
     }
 

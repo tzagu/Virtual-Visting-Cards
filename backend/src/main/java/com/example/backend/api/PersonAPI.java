@@ -33,7 +33,7 @@ public class PersonAPI {
     }
 
     @GetMapping("all/{id}")
-    public ResponseEntity<Optional<Person>> findById(int id){
+    public ResponseEntity<Optional<Person>> findById(@PathVariable int id){
         return ResponseEntity.ok(personService.findById(id));
     }
 
