@@ -1,5 +1,5 @@
 <template>
-<v-container fluid>
+<v-container fluid class="inspire">
   <v-row>
 <v-col v-for="(itemPerson, index) in itemPerson" :key="index">
     <v-card
@@ -52,5 +52,6 @@ export default {
 </script>
 
 <style>
-
+.inspire{
+    background-color: #36213E;}
 </style>

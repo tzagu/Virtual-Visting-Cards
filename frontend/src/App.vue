@@ -1,5 +1,21 @@
 <template>
-  <div id="app">
+  <div class="inspire">
+    <v-app-bar dark elevate-on-scroll absolute scroll-target="#scrolling-techniques-7" color="#36213E">
+
+      <v-spacer></v-spacer>
+
+      <v-btn icon>
+        <v-icon>mdi-message-outline</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-account-outline</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn>
+    </v-app-bar>
     <router-view/>
   </div>
 </template>
@@ -11,12 +27,6 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+.inspire{
+    background-color: #36213E;}
 </style>

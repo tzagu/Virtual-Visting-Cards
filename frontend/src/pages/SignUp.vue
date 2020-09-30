@@ -1,11 +1,11 @@
 <template>
-  <v-app id="inspire">
+  <v-app id="inspire" class="inspire">
     <v-main>
       <v-container class="fill-height" fluid>
         <v-row align="center" justify="center">
           <v-col cols="12" sm="8" md="4">
             <v-card class="elevation-24">
-              <v-toolbar color="#554971" dark flat>
+              <v-toolbar color="#513B59" dark flat>
                 <v-toolbar-title>Signup</v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-tooltip bottom>
@@ -15,13 +15,21 @@
               <v-card-text>
                 <form @submit.prevent="signUp">
                   <v-text-field
-                    class="px-6 mt-6"
-                    v-model="email"
+                    class="px-6 mt-8"
                     prepend-icon="mdi-account"
+                    label="Username"
+                    required
+                  ></v-text-field>
+
+                  <v-text-field
+                    class="px-6 mt-1"
+                    v-model="email"
+                    prepend-icon="mdi-email"
                     :rules="emailRules"
                     label="E-mail"
                     required
                   ></v-text-field>
+
 
                   <v-text-field
                     v-model="password"
@@ -38,7 +46,7 @@
                     id="confirmpassword"
                     label="Confirm Password"
                     name="confirmpassword"
-                    prepend-icon="mdi-lock"
+                    prepend-icon="mdi-lock-check"
                     type="password"
                   ></v-text-field>
 
@@ -49,13 +57,13 @@
                     label="Agree to terms and conditions"
                     required
                   ></v-checkbox>
-                  <v-btn type="submit" class="mr-6 mb-3 white--text" color="#554971">Signup</v-btn>
+                  <v-btn type="submit" class="mr-6 mb-3 white--text" color="#513B59">Signup</v-btn>
                 </form>
               </v-card-text>
             </v-card>
-            <div class="mt-8">
+            <div class="mt-8 grey--text">
               Already have and account?
-              <a href="#" class="text-decoration-none">Login</a>
+              <a href="#"  class="white--text">Login</a>
             </div>
           </v-col>
         </v-row>
@@ -112,5 +120,10 @@ export default {
   },
 };
 </script>
+
+
 <style scoped>
+
+.inspire{
+    background-color: #36213E;}
 </style>
