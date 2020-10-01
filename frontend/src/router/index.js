@@ -6,6 +6,7 @@ import CreateProfile from '@/pages/CreateProfile.vue'
 import ItemPersonCards from '@/components/ItemPersonCards.vue'
 import Filter from '@/pages/Filter.vue'
 import CardClicked from '@/pages/CardClicked.vue'
+import MyDeals from '@/pages/MyDeals.vue'
 
 
 Vue.use(Router)
@@ -41,6 +42,11 @@ export default new Router({
       path: '/partner',
       name: 'CardClicked',
       component: CardClicked
+    },
+    {
+      path: '/mydeals',
+      name: 'MyDeals',
+      component: MyDeals
     }
 
   ]
