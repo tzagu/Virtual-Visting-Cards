@@ -1,6 +1,6 @@
 <template>
   <div class="inspire">
-    <v-app-bar dark elevate-on-scroll absolute scroll-target="#scrolling-techniques-7" color="#36213E">
+    <v-app-bar dark elevate-on-scroll  scroll-target="#scrolling-techniques-7" color="#36213E" class="my-4">
 
       <v-spacer></v-spacer>
 
