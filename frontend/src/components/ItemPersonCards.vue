@@ -1,10 +1,11 @@
 <template>
-<v-container fluid class="inspire">
+<v-container fluid class="inspire fill-height">
   <v-row>
 <v-col v-for="(itemPerson, index) in itemPerson" :key="index">
     <v-card
     :elevation="12"
     shaped
+    max-width="400px"
   >
     <v-list-item three-line>
       <v-list-item-content>

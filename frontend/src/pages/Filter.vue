@@ -1,7 +1,7 @@
 <template>
-  <v-app class="inspire">
+  <v-app class="inspire inspire">
     <v-main>
-      <v-container>
+      <v-container class="inspire">
         <v-card>
           <v-form class="ma-12 pa-8">
             <v-row>

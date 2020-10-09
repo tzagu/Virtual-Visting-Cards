@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire" class="inspire">
     <v-main>
-      <v-container class="fill-height" fluid>
+      <v-container class="fill-height inspire" fluid>
         <v-row align="center" justify="center">
 
           <v-card class="pa-8">

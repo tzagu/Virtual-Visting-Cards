@@ -3,7 +3,7 @@
 <template>
   <v-app id="inspire" class="inspire">
     <v-main>
-      <v-container class="fill-height" >
+      <v-container class="fill-height inspire" >
         <!-- <v-row align="center" justify="center"> -->
           <v-row>
             <v-col cols="1">

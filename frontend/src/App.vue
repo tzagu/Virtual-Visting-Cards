@@ -16,7 +16,7 @@
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
     </v-app-bar>
-    <router-view/>
+    <router-view class = "inspire"/>
   </div>
 </template>
 
@@ -28,5 +28,7 @@ export default {
 
 <style>
 .inspire{
-    background-color: #36213E;}
+    background-color: #36213E;
+    background: #36213E;
+    }
 </style>

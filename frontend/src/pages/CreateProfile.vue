@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire" class="inspire">
     <v-main>
-      <v-container class="fill-height" fluid>
+      <v-container class="fill-height inspire" fluid>
         <v-row align="center" justify="center">
           <v-col cols="4" class="pr-0">
             <v-card flat tile class="gradiant pa-8 ml-8">

@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire" class="inspire">
     <v-main>
-      <v-container class="fill-height" fluid>
+      <v-container class="fill-height inspire" fluid>
         <v-row align="center" justify="center">
           <v-col cols="12" sm="8" md="4">
             <v-card class="elevation-24">
@@ -15,6 +15,9 @@
               <v-card-text>
                 <form @submit.prevent="signUp">
                   <v-text-field
+                  v-model="name"
+                  id="name"
+                  name="name"
                     class="px-6 mt-8"
                     prepend-icon="mdi-account"
                     label="Username"
@@ -42,7 +45,9 @@
                   ></v-text-field>
 
                   <v-text-field
+                  v-model="confirmpassword"
                     class="px-6"
+                    :rules="[passwords]"
                     id="confirmpassword"
                     label="Confirm Password"
                     name="confirmpassword"
@@ -84,10 +89,15 @@ export default {
   data: () => ({
     email: "",
     password: "",
+    confirmpassword: "",
+    name: "",
 
     emailRules: [
       (v) => !!v || "E-mail is required",
       (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
+    ],
+    pwrules: [
+      passwords
     ],
     checkbox: false,
   }),
@@ -101,6 +111,10 @@ export default {
       this.$refs.form.validate();
     },
 
+    passwords() {
+      return this.confirmpassword === this.password || "passwords must match";
+    },
+
     signUp() {
       console.log(
         "signup method initiated"
@@ -109,6 +123,7 @@ export default {
         .post('/saveperson', {
           email: this.email,
           password: this.password,
+          name: this.name
         })
         .then((response) => {
           console.log(response);
@@ -125,5 +140,7 @@ export default {
 <style scoped>
 
 .inspire{
-    background-color: #36213E;}
+    background-color: #36213E;
+    background: #36213E;
+    }
 </style>

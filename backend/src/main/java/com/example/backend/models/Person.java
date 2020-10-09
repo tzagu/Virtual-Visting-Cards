@@ -61,10 +61,11 @@ public class Person {
     public Person() {
     }
 
-    public Person(String email, String password) {
+    public Person(String email, String password, String name) {
         super();
         this.email = email;
         this.password = password;
+        this.name = name;
     }
 
     public int getId() {
