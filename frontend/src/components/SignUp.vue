@@ -68,7 +68,7 @@
             </v-card>
             <div class="mt-8 grey--text">
               Already have and account?
-              <a href="#"  class="white--text">Login</a>
+              <a href="#/login"  class="white--text">Login</a>
             </div>
           </v-col>
         </v-row>
@@ -80,10 +80,14 @@
 
 <script>
 import axios from 'axios'
+import Login from './Login'
 
 export default {
   props: {
     source: String,
+  },
+  components: {
+    Login
   },
 
   data: () => ({
@@ -101,10 +105,6 @@ export default {
     ],
     checkbox: false,
   }),
-
-  // mounted(){
-  //   this.findAll();
-  // },
 
   methods: {
     validate() {

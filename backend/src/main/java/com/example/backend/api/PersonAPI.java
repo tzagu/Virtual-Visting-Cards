@@ -25,6 +25,7 @@ public class PersonAPI {
         Person person1 = personService.save(person);
         return new ResponseEntity<Person>(person1, new HttpHeaders(), HttpStatus.OK);
     }
+
     @GetMapping("/person")
     public ResponseEntity<List<Person>> findAll(){
         List<Person> personList = personService.findAll();
@@ -32,13 +33,15 @@ public class PersonAPI {
         return new ResponseEntity<List<Person>>(personList, new HttpHeaders(), HttpStatus.OK);
     }
 
-    @GetMapping("all/{id}")
+    @GetMapping("/all/{id}")
     public ResponseEntity<Optional<Person>> findById(@PathVariable int id){
         return ResponseEntity.ok(personService.findById(id));
     }
 
-
-
-
+    @GetMapping("/partner/{email:.+}")
+    public ResponseEntity findByEmail(@PathVariable String email){
+        Person person = personService.findByEmail(email);
+        return ResponseEntity.ok(person);
+    }
 
 }

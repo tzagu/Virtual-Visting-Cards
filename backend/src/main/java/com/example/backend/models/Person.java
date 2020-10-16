@@ -1,5 +1,6 @@
 package com.example.backend.models;
 
+import jdk.jfr.Timestamp;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
@@ -29,6 +30,7 @@ public class Person {
 
     @Column
     @CreatedDate
+    @Timestamp
     private Date joinedDate;
 
     @Column

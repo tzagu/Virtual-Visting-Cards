@@ -13,7 +13,7 @@
                 </v-tooltip>
               </v-toolbar>
               <v-card-text>
-                <form @submit.prevent="signUp">
+                <form @submit.prevent="login">
                   <v-text-field
                     class="px-6 mt-6"
                     v-model="email"
@@ -25,7 +25,7 @@
 
                   <v-text-field
                     v-model="password"
-                    class="px-6"
+                    class="px-6 mt-6"
                     id="password"
                     label="Password"
                     name="password"
@@ -33,13 +33,20 @@
                     type="password"
                   ></v-text-field>
 
-                  <v-btn type="submit" class="mr-6 mb-3 white--text" color="#513B59">Login</v-btn>
+                  <v-btn
+                    type="submit"
+                    class="mr-6 mb-3 white--text"
+                    color="#513B59"
+                    >Login</v-btn
+                  >
                 </form>
               </v-card-text>
             </v-card>
             <div class="mt-8 grey--text">
               Not a member?
-              <a href="#"  class="white--text">Signup here</a>
+              <a href="/" class="white--text" @click="showSignUp"
+                >Signup here</a
+              >
             </div>
           </v-col>
         </v-row>
@@ -49,21 +56,26 @@
 </template>
 
 <script>
+import Axios from "axios";
 export default {
-    data(){
-      return{
-        email:"",
-        password: ""
-      }
+  data: () => ({
+    email: "",
+    password: "",
+  }),
+  methods: {
+    login() {
+      console.log("login method initiated");
+      console.log(this.email);
+      Axios.get("/partner/"+ this.email).then((response) => {
+        console.log(response);
+      });
     },
-    methods: {
-      login(){}
-    }
-}
+  },
+};
 </script>
 
 <style scoped>
-
-.inspire{
-    background-color: #36213E;}
+.inspire {
+  background-color: #36213e;
+}
 </style>

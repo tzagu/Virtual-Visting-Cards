@@ -44,4 +44,8 @@ PersonRepository personRepository;
     public void deleteById(int id){
         personRepository.deleteById(id);
     }
+
+    public Person findByEmail(String email){
+        return personRepository.findByEmail(email);
+    }
 }
