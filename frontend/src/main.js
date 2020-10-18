@@ -10,13 +10,30 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    count: 0
+    count: 0,
+    user: {
+      name: "",
+      mobile1: "",
+      mobile2: "",
+      landline: "",
+      joinedDate: "",
+      email: "",
+      address: "",
+      dealCount: 0,
+      status: ""
+  },
+    cardData: [],
   },
   mutations: {
     increment (state) {
       state.count++
+    },
+    setName(state, payload){
+      state.user.name = payload
     }
-  }
+  },
+  getters: {},
+  actions: {}
 })
 new Vue({
   el: '#app',

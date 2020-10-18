@@ -23,12 +23,18 @@ export default new Router({
     {
       path: '/itempersoncards',
       name: 'ItemPersonCards',
-      component: ItemPersonCards
+      component: ItemPersonCards,
+      meta: {
+        allowAnonymous: true
+      }
     },
     {
       path: '/login',
       name: 'Login',
-      component: Login
+      component: Login,
+      meta: {
+        allowAnonymous: true
+      }
     },
     {
       path: '/createprofile',

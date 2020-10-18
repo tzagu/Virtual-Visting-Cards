@@ -13,7 +13,7 @@
                 </v-tooltip>
               </v-toolbar>
               <v-card-text>
-                <form @submit.prevent="login">
+                <form>
                   <v-text-field
                     class="px-6 mt-6"
                     v-model="email"
@@ -37,6 +37,7 @@
                     type="submit"
                     class="mr-6 mb-3 white--text"
                     color="#513B59"
+                    @click.prevent="login"
                     >Login</v-btn
                   >
                 </form>
@@ -64,10 +65,11 @@ export default {
   }),
   methods: {
     login() {
-      console.log("login method initiated");
-      console.log(this.email);
-      Axios.get("/partner/"+ this.email).then((response) => {
-        console.log(response);
+      Axios.get("/partner/" + this.email).then((response) => {
+        if(this.email === response.data.email && this.password === response.data.password){
+          this.$store.commit("setName", response.data.name)
+          this.$router.replace({name: "ItemPersonCards"})
+        }
       });
     },
   },

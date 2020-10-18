@@ -9,14 +9,14 @@
   >
     <v-list-item three-line>
       <v-list-item-content>
-        <div class="overline mb-4">{{itemPerson.name}}</div>
+        <div class="overline mb-4">{{itemPerson.id}}</div>
         <v-list-item-title class="headline mb-1">{{itemPerson.price}}</v-list-item-title>
         <v-list-item-subtitle>{{itemPerson.brand}}</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
 
     <v-card-actions>
-      <v-btn text>Details</v-btn>
+      <v-btn text @click="cardDetails(itemPerson.id)">Details</v-btn>
       <v-btn text>Contact</v-btn>
     </v-card-actions>
   </v-card>
@@ -43,10 +43,15 @@ export default {
       .catch(e=>{
         console.log(e);
       });
+    },
+    cardDetails(id){
+      console.log(id);
+      this.$router.replace({name: "CardClicked"})
     }
   },
   mounted() {
     this.findAll();
+    console.log(this.$store.state.user.name + " logged in")
   }
 
 }
