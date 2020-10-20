@@ -48,6 +48,12 @@ public class Person {
     @Column
     private String status;
 
+    @Column
+    private int rating;
+
+    @Column
+    private String type;
+
     @OneToMany(cascade = CascadeType.ALL, targetEntity = ItemPerson.class)
     @JoinColumn(name = "personId", referencedColumnName = "id")
     private List<ItemPerson> itemPersonList = new ArrayList<>();
@@ -190,6 +196,19 @@ public class Person {
         this.status = status;
     }
 
+    public int getRating() {
+        return rating;
+    }
 
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }

@@ -22,20 +22,24 @@
             <v-card flat tile class="pa-8 mr-8">
               <v-container fluid>
                 <v-form>
-                  <v-text-field label="Name"></v-text-field>
+                  <v-text-field v-model="name" label="Name"></v-text-field>
                   <v-row>
                     <v-col>
-                      <v-text-field readonly label="Item" v-model="selected"></v-text-field>
+                      <v-text-field
+                        readonly
+                        label="Item"
+                        v-model="selected"
+                      ></v-text-field>
                     </v-col>
                     <v-col>
                       <v-expansion-panels>
                         <v-expansion-panel>
-                          <v-expansion-panel-header >
+                          <v-expansion-panel-header>
                             <v-row no-gutters>Select</v-row>
                           </v-expansion-panel-header>
                           <v-expansion-panel-content>
                             <v-select
-                            v-model="selected"
+                              v-model="selected"
                               solo
                               flat
                               dense
@@ -49,17 +53,38 @@
                       ></v-expansion-panels>
                     </v-col>
                   </v-row>
-                  <v-select label="Membership type" :items="types"></v-select>
+                  <v-select
+                    label="Membership type"
+                    :items="types"
+                    v-model="type"
+                  ></v-select>
 
-                  <v-select label="Location" :items="districts"></v-select>
+                  <v-select
+                    label="Location"
+                    :items="districts"
+                    v-model="location"
+                  ></v-select>
 
-                  <v-text-field label="Mobile number 1"></v-text-field>
+                  <v-text-field
+                    label="Mobile number 1"
+                    v-model="mobile1"
+                  ></v-text-field>
 
-                  <v-text-field label="Mobile number 2"></v-text-field>
+                  <v-text-field
+                    label="Mobile number 2"
+                    v-model="mobile2"
+                  ></v-text-field>
 
-                  <v-text-field label="Home/Work number "></v-text-field>
+                  <v-text-field
+                    label="Home/Work number"
+                    v-model="landline"
+                  ></v-text-field>
 
-                  <v-btn absolute right class="white--text" color="#36213e"
+                  <v-btn
+                    @click="createProfile"
+                    right
+                    class="white--text"
+                    color="#36213e"
                     >Create profile</v-btn
                   >
                 </v-form>
@@ -74,17 +99,31 @@
 
 
 <script>
+import Axios from "axios";
+
 export default {
   data() {
     return {
-      selected:[],
+      name: "",
+      type: "",
+      location: "",
+      mobile1: "",
+      mobile2: "",
+      landline: "",
+
+      selected: [],
+
       categories: [
         { name: "Cosmetics", items: ["cream", "talc"] },
         { name: "Pharmaceutical", items: ["masks", "gloves"] },
         { name: "Electronic", items: ["mobile phones"] },
         { name: "Automobile", items: [""] },
       ],
+
+      stuff: [],
+
       types: ["Buyer", "Seller"],
+
       districts: [
         "Ampara",
         "Anuradhapura",
@@ -114,7 +153,33 @@ export default {
       ],
     };
   },
- };
+  methods: {
+    createProfile() {
+      Axios.post("/saveperson", {
+        name: this.name,
+        type: this.type,
+        location: this.location,
+        mobile1: this.mobile1,
+        mobile2: this.mobile2,
+        landline: this.landline,
+      })
+        .then((response) => {
+          console.log(response);
+          this.$router.replace({ name: "ItemPersonCards" });
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+        console.log(this.selected)
+    },
+  },
+  mounted(){
+    Axios.get("/categories").then(response => {
+      this.stuff = response.data
+      console.log(this.stuff)
+    })
+  }
+};
 </script>
 
 

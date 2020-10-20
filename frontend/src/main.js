@@ -22,7 +22,9 @@ const store = new Vuex.Store({
       dealCount: 0,
       status: ""
   },
-    cardData: [],
+    cardData: {
+      id: 0,
+    },
   },
   mutations: {
     increment (state) {
@@ -30,6 +32,9 @@ const store = new Vuex.Store({
     },
     setName(state, payload){
       state.user.name = payload
+    },
+    setCardId(state, payload){
+      state.cardData.id = payload
     }
   },
   getters: {},

@@ -37,7 +37,7 @@
                     type="submit"
                     class="mr-6 mb-3 white--text"
                     color="#513B59"
-                    @click.prevent="login"
+                    @click="login"
                     >Login</v-btn
                   >
                 </form>

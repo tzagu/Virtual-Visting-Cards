@@ -101,7 +101,7 @@ export default {
       (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
     ],
     pwrules: [
-      passwords
+      passwords()
     ],
     checkbox: false,
   }),
@@ -116,9 +116,6 @@ export default {
     },
 
     signUp() {
-      console.log(
-        "signup method initiated"
-      );
       axios
         .post('/saveperson', {
           email: this.email,
@@ -127,6 +124,7 @@ export default {
         })
         .then((response) => {
           console.log(response);
+          this.$router.replace({name: "Login"})
         })
         .catch((error) => {
           console.log(error);

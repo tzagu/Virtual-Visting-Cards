@@ -1,11 +1,6 @@
 package com.example.backend.models;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table
@@ -21,10 +16,9 @@ public class Item{
     public Item() {
     }
 
-    public Item(int id, String name, List<ItemPerson> itemPersonList) {
+    public Item(int id, String name) {
         this.id = id;
         this.name = name;
-//        this.itemPersonList = itemPersonList;
     }
 
     public int getId() {

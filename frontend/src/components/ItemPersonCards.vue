@@ -10,8 +10,8 @@
     <v-list-item three-line>
       <v-list-item-content>
         <div class="overline mb-4">{{itemPerson.id}}</div>
-        <v-list-item-title class="headline mb-1">{{itemPerson.price}}</v-list-item-title>
-        <v-list-item-subtitle>{{itemPerson.brand}}</v-list-item-subtitle>
+        <v-list-item-title class="headline mb-1">Price: {{itemPerson.price}}</v-list-item-title>
+        <v-list-item-subtitle>Brand: {{itemPerson.brand}}</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
 
@@ -45,7 +45,8 @@ export default {
       });
     },
     cardDetails(id){
-      console.log(id);
+      this.$store.commit("setCardId", id)
+      console.log(this.$store.state.cardData.id)
       this.$router.replace({name: "CardClicked"})
     }
   },

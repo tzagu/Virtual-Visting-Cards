@@ -18,7 +18,7 @@
                   ></v-text-field>
                   <v-text-field
                     prepend-icon="mdi-email"
-                    label="Email"
+                    label="Your email"
                     required
                   ></v-text-field>
                   <v-textarea label="Message" prepend-icon="mdi-message"></v-textarea>
