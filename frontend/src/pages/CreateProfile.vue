@@ -120,7 +120,8 @@ export default {
         { name: "Automobile", items: [""] },
       ],
 
-      stuff: [],
+      cats: [],
+
 
       types: ["Buyer", "Seller"],
 
@@ -170,15 +171,20 @@ export default {
         .catch((error) => {
           console.log(error);
         });
-        console.log(this.selected)
+      console.log(this.selected);
     },
   },
-  mounted(){
-    Axios.get("/categories").then(response => {
-      this.stuff = response.data
-      console.log(this.stuff)
-    })
-  }
+  mounted() {
+    Axios.get("/categories")
+      .then((response) => {
+        console.log(response.data)
+        let cats = response.data
+        console.log("the stuff in the cat are " + cats)
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  },
 };
 </script>
 
