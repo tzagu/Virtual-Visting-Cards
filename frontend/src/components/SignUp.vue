@@ -13,26 +13,29 @@
                 </v-tooltip>
               </v-toolbar>
               <v-card-text>
-                <form @submit.prevent="signUp">
+                <v-form ref="form" @submit.prevent="signUp">
                   <v-text-field
-                  v-model="name"
-                  id="name"
-                  name="name"
+                    v-model="name"
+                    id="name"
+                    name="name"
                     class="px-6 mt-8"
                     prepend-icon="mdi-account"
                     label="Username"
+                    counter="20"
+                    :rules="[maxLength]"
                     required
                   ></v-text-field>
 
                   <v-text-field
+                  id="email"
+                  type="email"
                     class="px-6 mt-1"
                     v-model="email"
                     prepend-icon="mdi-email"
-                    :rules="emailRules"
+                    :rules="[(v) => !!v || 'E-mail is required', (v) => /.+@.+\..+/.test(v) || 'E-mail must be valid']"
                     label="E-mail"
                     required
                   ></v-text-field>
-
 
                   <v-text-field
                     v-model="password"
@@ -45,7 +48,7 @@
                   ></v-text-field>
 
                   <v-text-field
-                  v-model="confirmpassword"
+                    v-model="confirmpassword"
                     class="px-6"
                     :rules="[passwords]"
                     id="confirmpassword"
@@ -58,17 +61,23 @@
                   <v-checkbox
                     class="px-6"
                     v-model="checkbox"
-                    :rules="[v => !!v || 'You must agree to continue!']"
+                    :rules="[(v) => !!v || 'You must agree to continue!']"
                     label="Agree to terms and conditions"
                     required
                   ></v-checkbox>
-                  <v-btn type="submit" class="mr-6 mb-3 white--text" color="#513B59">Signup</v-btn>
-                </form>
+                  <v-btn
+                    type="submit"
+                    @click="validate"
+                    class="mr-6 mb-3 white--text"
+                    color="#513B59"
+                    >Signup</v-btn
+                  >
+                </v-form>
               </v-card-text>
             </v-card>
             <div class="mt-8 grey--text">
               Already have and account?
-              <a href="#/login"  class="white--text">Login</a>
+              <a href="#/login" class="white--text">Login</a>
             </div>
           </v-col>
         </v-row>
@@ -79,15 +88,15 @@
 
 
 <script>
-import axios from 'axios'
-import Login from './Login'
+import axios from "axios";
+import Login from "./Login";
 
 export default {
   props: {
     source: String,
   },
   components: {
-    Login
+    Login,
   },
 
   data: () => ({
@@ -96,13 +105,6 @@ export default {
     confirmpassword: "",
     name: "",
 
-    emailRules: [
-      (v) => !!v || "E-mail is required",
-      (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
-    ],
-    pwrules: [
-      passwords()
-    ],
     checkbox: false,
   }),
 
@@ -111,24 +113,42 @@ export default {
       this.$refs.form.validate();
     },
 
+    maxLength() {
+      return (
+        this.name.length <= 20 || "username should be less than 20 characters"
+      );
+    },
+
     passwords() {
       return this.confirmpassword === this.password || "passwords must match";
     },
 
     signUp() {
-      axios
-        .post('/saveperson', {
-          email: this.email,
-          password: this.password,
-          name: this.name
-        })
-        .then((response) => {
-          console.log(response);
-          this.$router.replace({name: "Login"})
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+      if (this.$refs.form.validate()) {
+        axios.get("/partner/"+this.email).then(
+          response => {
+            if(response.data === ""){
+              axios
+                .post("/saveperson", {
+                  email: this.email,
+                  password: this.password,
+                  name: this.name,
+                })
+                .then((response) => {
+                  console.log(response);
+                  this.$router.replace({ name: "Login" });
+                })
+                .catch((error) => {
+                  console.log(error);
+                });
+            }
+            else{
+              alert("A user from this email already exists. Please use a different email address.")
+              document.getElementById("email").focus()
+            }
+          }
+        );
+      }
     },
   },
 };
@@ -136,9 +156,8 @@ export default {
 
 
 <style scoped>
-
-.inspire{
-    background-color: #36213E;
-    background: #36213E;
-    }
+.inspire {
+  background-color: #36213e;
+  background: #36213e;
+}
 </style>
