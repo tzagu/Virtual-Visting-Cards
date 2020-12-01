@@ -1,18 +1,25 @@
+// TODO
+//methods must show the respective menus of links
+
 <template>
   <div class="inspire">
-    <v-app-bar dark elevate-on-scroll  scroll-target="#scrolling-techniques-7" color="#36213E" class="my-4">
+    <v-app-bar dark elevate-on-scroll  color="#36213E" class="my-4">
+
+      <v-btn @click.prevent="showItemPersonCards" icon>
+        <v-icon>mdi-home-outline</v-icon>
+      </v-btn>
 
       <v-spacer></v-spacer>
 
-      <v-btn icon>
-        <v-icon>mdi-message-outline</v-icon>
+      <v-btn @click.prevent="showFilter" icon>
+        <v-icon>mdi-filter-outline</v-icon>
       </v-btn>
 
-      <v-btn icon>
+      <v-btn @click.prevent="showProfileActivities" icon>
         <v-icon>mdi-account-outline</v-icon>
       </v-btn>
 
-      <v-btn icon>
+      <v-btn @click.prevent="showOptions" icon>
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
     </v-app-bar>
@@ -22,7 +29,23 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+
+  methods: {
+    showItemPersonCards(){
+      this.$store.commit("setFilterStatus", false)
+      window.location.reload()
+    },
+    showFilter(){
+      this.$router.push({name: "Filter"})
+    },
+    showProfileActivities(){
+      this.$router.push({name: "MyDeals"})
+    },
+    showOptions(){
+      this.$router.push({name: "ContactUs"})
+    },
+  }
 }
 </script>
 

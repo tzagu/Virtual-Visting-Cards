@@ -13,12 +13,12 @@
                 </v-tooltip>
               </v-toolbar>
               <v-card-text>
-                <form>
+                <form @submit.prevent="login">
                   <v-text-field
                     class="px-6 mt-6"
                     v-model="email"
                     prepend-icon="mdi-account"
-                    :rules="emailRules"
+                    :rules="[(v) => !!v || 'E-mail is required', (v) => /.+@.+\..+/.test(v) || 'E-mail must be valid']"
                     label="E-mail"
                     required
                   ></v-text-field>
@@ -37,7 +37,6 @@
                     type="submit"
                     class="mr-6 mb-3 white--text"
                     color="#513B59"
-                    @click="login"
                     >Login</v-btn
                   >
                 </form>
@@ -45,9 +44,8 @@
             </v-card>
             <div class="mt-8 grey--text">
               Not a member?
-              <a href="/" class="white--text" @click="showSignUp"
-                >Signup here</a
-              >
+              <a href="/" class="white--text">Signup here</a>     
+              <!-- showSignupPage method should be added to render the page instead of giving a link path -->
             </div>
           </v-col>
         </v-row>
@@ -58,7 +56,16 @@
 
 <script>
 import Axios from "axios";
+import ItemPersonCards from "./ItemPersonCards"
 export default {
+
+    props: {
+    source: String,
+  },
+  components: {
+    ItemPersonCards,
+  },
+
   data: () => ({
     email: "",
     password: "",
@@ -68,9 +75,14 @@ export default {
       Axios.get("/partner/" + this.email).then((response) => {
         if(this.email === response.data.email && this.password === response.data.password){
           this.$store.commit("setName", response.data.name)
-          this.$router.replace({name: "ItemPersonCards"})
+          this.$store.commit("setEmail", response.data.email)
+          this.$store.commit("setUserId", response.data.id)
+          this.$router.push({name: "ItemPersonCards"})
         }
-      });
+        else{
+          alert("The credentials doesn't match. Please try again")
+        }
+      }).catch((error) => {console.log(error)});
     },
   },
 };

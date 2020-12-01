@@ -31,7 +31,7 @@ public class ItemPersonAPI {
     }
 
     @PostMapping("/itemperson")
-    public ResponseEntity<ItemPerson> savePerson(@Validated @RequestBody ItemPerson itemPerson){
+    public ResponseEntity<ItemPerson> saveItemPerson(@Validated @RequestBody ItemPerson itemPerson){
         ItemPerson itemPerson1 = itemPersonService.save(itemPerson);
         return new ResponseEntity<ItemPerson>(itemPerson1, new HttpHeaders(), HttpStatus.OK);
     }

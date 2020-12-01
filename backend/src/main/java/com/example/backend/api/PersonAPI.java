@@ -1,5 +1,6 @@
 package com.example.backend.api;
 
+import com.example.backend.repositories.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -19,11 +20,31 @@ public class PersonAPI {
     @Autowired
     PersonService personService;
 
+    @Autowired
+    PersonRepository personRepository;
+
 
     @PostMapping("/saveperson")
     public ResponseEntity<Person> savePerson(@Validated @RequestBody Person person){
         Person person1 = personService.save(person);
         return new ResponseEntity<Person>(person1, new HttpHeaders(), HttpStatus.OK);
+    }
+
+    @PutMapping("/person/{id}")
+    public ResponseEntity<Person> updatePerson(@RequestBody Person person, @PathVariable int id){
+        Optional<Person> thisPerson = personRepository.findById(id);
+        if(thisPerson.isPresent()){
+            Person thePerson = thisPerson.get();
+            thePerson.setType(person.getType());
+            thePerson.setAddress(person.getAddress());
+            thePerson.setMobile1(person.getMobile1());
+            thePerson.setMobile2(person.getMobile2());
+            thePerson.setLandline(person.getLandline());
+            return new ResponseEntity<>(personRepository.save(thePerson), HttpStatus.OK);
+        }
+        else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
     @GetMapping("/person")

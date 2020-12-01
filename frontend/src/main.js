@@ -12,6 +12,7 @@ const store = new Vuex.Store({
   state: {
     count: 0,
     user: {
+      id: 0,
       name: "",
       mobile1: "",
       mobile2: "",
@@ -21,20 +22,57 @@ const store = new Vuex.Store({
       address: "",
       dealCount: 0,
       status: ""
-  },
+    },
+
+    filter: {
+      filtered: false,
+      location: "",
+      item: "",
+      minPrice: 0,
+      maxPrice: 0,
+      partnerType: "",
+    },
+
+    categoryItems: [],
+
+    allItemPersonCards: [],
+
     cardData: {
       id: 0,
     },
   },
   mutations: {
-    increment (state) {
+    increment(state) {
       state.count++
     },
-    setName(state, payload){
+    setName(state, payload) {
       state.user.name = payload
     },
-    setCardId(state, payload){
+    setEmail(state, payload) {
+      state.user.email = payload
+    },
+    setUserId(state, payload) {
+      state.user.id = payload
+    },
+    setCardId(state, payload) {
       state.cardData.id = payload
+    },
+    setCategoryItems(state, payload) {
+      state.categoryItems.push(payload)
+    },
+    setAllItemPersonCards(state, payload) {
+      state.allItemPersonCards.push(payload)
+    },
+    setFilterStatus(state, payload){
+      state.filter.filtered = payload
+    },
+    setFilter(state, payload){
+      state.filter.filtered = payload[0].filtered
+      state.filter.location = payload[0].filterLocation
+      state.filter.item = payload[0].filterItem
+      state.filter.minPrice = payload[0].filterMinPrice
+      state.filter.maxPrice = payload[0].filterMaxPrice
+      state.filter.partnerType = payload[0].filterPartnerType
     }
   },
   getters: {},

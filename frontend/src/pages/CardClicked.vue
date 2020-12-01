@@ -208,25 +208,32 @@ export default {
         this.itemperson.itemName = response.data.item.name;
         this.itemperson.price = response.data.price;
         this.itemperson.location = response.data.deliverTo;
+
+        this.itemperson.personName = response.data.person.name;
+              this.itemperson.email = response.data.person.email;
+              this.itemperson.mobile1 = response.data.person.mobile1;
+              this.itemperson.mobile2 = response.data.person.mobile2;
+              this.itemperson.landline = response.data.person.landLine;
+              this.itemperson.status = response.data.person.status;
       }
-    ),
-      Axios.get("/person").then((response) => {
-        for (var i = 0; i < response.data.length; i++) {
-          for (var j = 0; j < response.data[i].itemPersonList.length; j++) {
-            if (
-              response.data[i].itemPersonList[j].id ===
-              this.$store.state.cardData.id
-            ) {
-              this.itemperson.personName = response.data[i].name;
-              this.itemperson.email = response.data[i].email;
-              this.itemperson.mobile1 = response.data[i].mobile1;
-              this.itemperson.mobile2 = response.data[i].mobile2;
-              this.itemperson.landline = response.data[i].landLine;
-              this.itemperson.status = response.data[i].status;
-            }
-          }
-        }
-      });
+    )
+      // Axios.get("/person").then((response) => {
+      //   for (var i = 0; i < response.data.length; i++) {
+      //     for (var j = 0; j < response.data[i].itemPersonList.length; j++) {
+      //       if (
+      //         response.data[i].itemPersonList[j].id ===
+      //         this.$store.state.cardData.id
+      //       ) {
+      //         this.itemperson.personName = response.data[i].name;
+      //         this.itemperson.email = response.data[i].email;
+      //         this.itemperson.mobile1 = response.data[i].mobile1;
+      //         this.itemperson.mobile2 = response.data[i].mobile2;
+      //         this.itemperson.landline = response.data[i].landLine;
+      //         this.itemperson.status = response.data[i].status;
+      //       }
+      //     }
+      //   }
+      // });
   },
 };
 </script>

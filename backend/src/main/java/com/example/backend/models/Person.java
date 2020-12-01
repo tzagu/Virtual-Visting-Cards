@@ -54,9 +54,9 @@ public class Person {
     @Column
     private String type;
 
-    @OneToMany(cascade = CascadeType.ALL, targetEntity = ItemPerson.class)
-    @JoinColumn(name = "personId", referencedColumnName = "id")
-    private List<ItemPerson> itemPersonList = new ArrayList<>();
+//    @OneToMany(cascade = CascadeType.ALL, targetEntity = ItemPerson.class)
+//    @JoinColumn(name = "personId", referencedColumnName = "id")
+//    private List<ItemPerson> itemPersonList = new ArrayList<>();
 
     @OneToMany(cascade = CascadeType.ALL, targetEntity = Deals.class)
     @JoinColumn(name = "sellerdeal", referencedColumnName = "id")
@@ -74,6 +74,24 @@ public class Person {
         this.email = email;
         this.password = password;
         this.name = name;
+    }
+
+    public Person(int id, String name, String mobile1, String mobile2, String landLine, Date joinedDate, String email, String password, String address, int dealCount, String status, int rating, String type, List<Deals> person1, List<Deals> person2) {
+        this.id = id;
+        this.name = name;
+        this.mobile1 = mobile1;
+        this.mobile2 = mobile2;
+        this.landLine = landLine;
+        this.joinedDate = joinedDate;
+        this.email = email;
+        this.password = password;
+        this.address = address;
+        this.dealCount = dealCount;
+        this.status = status;
+        this.rating = rating;
+        this.type = type;
+        this.person1 = person1;
+        this.person2 = person2;
     }
 
     public int getId() {
@@ -124,14 +142,6 @@ public class Person {
         this.email = email;
     }
 
-    public String getLandLine() {
-        return landLine;
-    }
-
-    public void setLandLine(String landLine) {
-        this.landLine = landLine;
-    }
-
     public Date getJoinedDate() {
         return joinedDate;
     }
@@ -148,13 +158,13 @@ public class Person {
         this.password = password;
     }
 
-    public List<ItemPerson> getItemPersonList() {
-        return itemPersonList;
-    }
-
-    public void setItemPersonList(List<ItemPerson> itemPersonList) {
-        this.itemPersonList = itemPersonList;
-    }
+//    public List<ItemPerson> getItemPersonList() {
+//        return itemPersonList;
+//    }
+//
+//    public void setItemPersonList(List<ItemPerson> itemPersonList) {
+//        this.itemPersonList = itemPersonList;
+//    }
 
     public List<Deals> getPerson1() {
         return person1;

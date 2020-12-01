@@ -34,26 +34,30 @@
   <component name="ChangeListManager">
     <list default="true" id="8bc1d272-ce2b-400e-9617-cef7eef9282f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/api/ItemPersonAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/api/ItemPersonAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/api/PersonAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/api/PersonAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/models/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/models/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/models/ItemPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/models/ItemPerson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/repositories/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/repositories/PersonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/services/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/services/PersonService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ContactUs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ContactUs.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/ItemPersonCards.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ItemPersonCards.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/SignUp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SignUp.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/CardClicked.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/CardClicked.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/CreateProfile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/CreateProfile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Filter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Filter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/MyDeals.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/MyDeals.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/target/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.13c0ee1b00d5c4ccc092f1a21be2492f.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.13c0ee1b00d5c4ccc092f1a21be2492f.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.ad280e794734d9c70683.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.ad280e794734d9c70683.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.9b86364d5e0afcaacff6b9ddd80ce490.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.9b86364d5e0afcaacff6b9ddd80ce490.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.80a2a93b6fa1eb570493.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.80a2a93b6fa1eb570493.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/vendor.673014ea3c79c8791cdc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/vendor.673014ea3c79c8791cdc.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/target/frontend-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/frontend-0.0.1-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,10 +155,10 @@
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="678" y="355" width="608" height="403" key="#com.intellij.fileTypes.FileTypeChooser/54.27.1866.1053@54.27.1866.1053" timestamp="1598162891086" />
-    <state x="795" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1603210138801">
+    <state x="795" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1605201108263">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state x="795" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/54.27.1866.1053@54.27.1866.1053" timestamp="1603210138801" />
+    <state x="795" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/54.27.1866.1053@54.27.1866.1053" timestamp="1605201108263" />
     <state x="745" y="335" width="524" height="451" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1599727480160">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
@@ -195,10 +199,6 @@
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="778" y="412" width="417" height="289" key="XPathView.InputDialog.DIMENSION_SERVICE_KEY.SIMPLE/54.27.1866.1053@54.27.1866.1053" timestamp="1599483800267" />
-    <state x="678" y="162" width="677" height="783" key="find.popup" timestamp="1598114765273">
-      <screen x="54" y="27" width="1866" height="1053" />
-    </state>
-    <state x="678" y="162" width="677" height="783" key="find.popup/54.27.1866.1053@54.27.1866.1053" timestamp="1598114765273" />
     <state x="677" y="311" width="610" height="492" key="refactoring.ChangeSignatureDialog" timestamp="1602712337638">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
@@ -207,6 +207,10 @@
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="651" y="252" key="run.anything.popup/54.27.1866.1053@54.27.1866.1053" timestamp="1602705052849" />
+    <state x="650" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1606765230652">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="650" y="259" width="672" height="678" key="search.everywhere.popup/54.27.1866.1053@54.27.1866.1053" timestamp="1606765230652" />
   </component>
   <component name="XPathView.XPathProjectComponent">
     <history />

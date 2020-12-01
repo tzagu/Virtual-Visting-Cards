@@ -136,7 +136,7 @@ export default {
                 })
                 .then((response) => {
                   console.log(response);
-                  this.$router.replace({ name: "Login" });
+                  this.$router.push({ name: "Login" });
                 })
                 .catch((error) => {
                   console.log(error);

@@ -32,10 +32,14 @@ public class ItemPerson {
     @JoinColumn(name = "itemId")
     private Item item;
 
+    @ManyToOne
+    @JoinColumn(name = "personId")
+    private Person person;
+
     public ItemPerson() {
     }
 
-    public ItemPerson(int id, String brand, String deliverTo, int quantity, float price, List<Deals> deals, Item item)
+    public ItemPerson(int id, String brand, String deliverTo, int quantity, float price, List<Deals> deals, Item item, Person person)
     {
         this.id = id;
         this.brand = brand;
@@ -44,6 +48,7 @@ public class ItemPerson {
         this.price = price;
         this.deals = deals;
         this.item = item;
+        this.person = person;
     }
 
     public int getId() {
@@ -100,5 +105,13 @@ public class ItemPerson {
 
     public void setItem(Item item) {
         this.item = item;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
     }
 }
