@@ -1,10 +1,8 @@
 <template>
-  <v-app id="inspire" class="inspire">
-    <v-main>
-      <v-container class="fill-height inspire" fluid>
-        <v-row align="center" justify="center">
-          <v-col cols="4" class="pr-0">
-            <v-card flat tile class="gradiant pa-8 ml-8" >
+        <v-row align="center" justify="center" class="mt-12">
+          <v-row>
+          <v-col class="pa-0">
+            <v-card flat tile class="gradiant pa-8 mx-8" max-width="1000px">
               <v-list-item-content class="fill-height white--text" align="center" justify="center">
                 <v-list-item-title class="headline mb-1"
                   >Create your future!</v-list-item-title
@@ -17,9 +15,10 @@
               </v-list-item-content>
             </v-card>
           </v-col>
-
-          <v-col cols="6" class="pl-0">
-            <v-card flat tile class="pa-8 mr-8" >
+</v-row>
+<v-row>
+          <v-col class="pa-0">
+            <v-card flat tile class="pa-8 mx-8" max-width="1000px">
               <v-container fluid>
                 <v-form>
                   <v-select
@@ -190,10 +189,8 @@
               </v-container>
             </v-card>
           </v-col>
+          </v-row>
         </v-row>
-      </v-container>
-    </v-main>
-  </v-app>
 </template>
 
 
@@ -296,7 +293,7 @@ export default {
         console.log("selected items are")
       console.log(this.selectedItems);
 
-      for (let n = 0; n < this.selectedItems.length; n++) {
+      for (let n = 0; n < this.selectedItems.length; n++) {                     //looping through the selected items and adding them to the itemperson table
         for (let i = 0; i < this.categorisedItems.length; i++) {
           for (let j = 0; j < this.categorisedItems[i].stuff.length; j++) {
             console.log(this.selectedItems[n].item +" "+ this.categorisedItems[i].stuff[j])

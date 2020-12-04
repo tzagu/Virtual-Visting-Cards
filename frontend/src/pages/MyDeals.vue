@@ -1,18 +1,15 @@
 //TODO not mobile responsive
 
 <template>
-  <v-app id="inspire" class="inspire">
-    <v-main class="inspire">
-      <v-container class="fill-height inspire" >
-        <!-- <v-row align="center" justify="center"> -->
+<v-row justify="center" align="center" class="ma-8">
           <v-row>
-            <v-col cols="1">
+            <v-col cols="2" class="mr-2">
               <v-header class="white--text"
                 >My Cards</v-header
               >
             </v-col>
 
-            <v-col cols="11">
+            <v-col cols="10">
               <v-row>
               <v-card v-for="card in myCardList" :key="card" max-width="300px" class="ma-4">
               
@@ -35,11 +32,11 @@
           </v-row>
           <!-- ======================================================================== row ============================================================== -->
           <v-row>
-            <v-col cols="1">
+            <v-col cols="2" class="mr-2">
               <v-header class="white--text">Contacted partners</v-header>
             </v-col>
 
-            <v-col cols="11">
+            <v-col cols="10">
               <v-row>
               <v-card v-for="card in mycards" :key="card" max-width="300px" class="ma-4">
     <v-list-item three-line>
@@ -59,10 +56,7 @@
   </v-row>
             </v-col>
           </v-row>
-        <!-- </v-row> -->
-      </v-container>
-    </v-main>
-  </v-app>
+          </v-row>
 </template>
 
 <script>

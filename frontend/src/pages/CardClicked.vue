@@ -1,7 +1,4 @@
 <template>
-  <v-app id="inspire" class="inspire">
-    <v-main>
-      <v-container class="fill-height inspire" fluid>
         <v-row align="center" justify="center">
           <v-card class="pa-10 fill-height">
             <v-row>
@@ -177,9 +174,6 @@
             </v-row>
           </v-card>
         </v-row>
-      </v-container>
-    </v-main>
-  </v-app>
 </template>
 
 <script>
