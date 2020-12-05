@@ -6,9 +6,15 @@
 
     <v-spacer></v-spacer>
 
-    <v-btn @click.prevent="showFilter" icon>
+  <v-tooltip bottom>
+      <template v-slot:activator="{ on, attrs }">
+    <v-btn @click.prevent="showFilter" icon v-bind="attrs"
+          v-on="on">
       <v-icon>mdi-tune</v-icon>
     </v-btn>
+    </template>
+      <span>Filter</span>
+    </v-tooltip>
 
         <v-menu left bottom>
       <template v-slot:activator="{ on, attrs }">
@@ -22,6 +28,9 @@
           :key="index"
           @click="(showProfileActivities(profile.pageName))"
         >
+        <v-list-item-icon>
+          <v-icon v-text="profile.icon"></v-icon>
+        </v-list-item-icon>
           <v-list-item-title>
             {{ profile.title }}
           </v-list-item-title>
@@ -41,6 +50,9 @@
           :key="index"
           @click="(activateOption(options.pageName))"
         >
+        <v-list-item-icon>
+          <v-icon v-text="options.icon"></v-icon>
+        </v-list-item-icon>
           <v-list-item-title>
             {{ options.title }}
           </v-list-item-title>
@@ -55,14 +67,14 @@ export default {
   data() {
     return {
       options: [
-        { title: "Become VIP", pageName: "GetVip" },
-        { title: "Create business profile", pageName: "CreateProfile" },
-        { title: "Contact us", pageName: "ContactUs" },
-        { title: "Take a tour", pageName: "Tour" },
+        { icon : "mdi-crown", title: "Become VIP", pageName: "GetVip" },
+        { icon : "mdi-account-card-details", title: "Create business profile", pageName: "CreateProfile" },
+        { icon : "mdi-comment-account", title: "Contact us", pageName: "ContactUs" },
+        { icon : "mdi-rocket", title: "Take a tour", pageName: "Tour" },
       ],
       profile: [
-        {title: "My cards", pageName: "MyDeals"},
-        {title: "Logout", pageName: "Login"}
+        {icon : "mdi-account-settings-variant", title: "My cards", pageName: "MyDeals"},
+        {icon : "mdi-emoticon-sad", title: "Logout", pageName: "Login"}
       ]
     };
   },

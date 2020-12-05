@@ -145,6 +145,9 @@ export default {
       }
     },
   },
+  mounted(){
+    sessionStorage.clear();
+  }
 };
 </script>
 

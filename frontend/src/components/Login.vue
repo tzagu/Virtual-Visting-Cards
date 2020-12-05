@@ -85,6 +85,7 @@ export default {
     },
   },
   mounted() {
+    sessionStorage.clear();
     this.$store.commit("setName", "");
     this.$store.commit("setEmail", "");
     this.$store.commit("setUserId", "");

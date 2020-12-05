@@ -5,10 +5,12 @@ import App from './App'
 import router from './router'
 import vuetify from '@/plugins/vuetify'
 import Vuex from 'vuex'
+import createPersistedState from 'vuex-persistedstate'
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
+  plugins: [createPersistedState({storage: window.sessionStorage, paths: ['user', 'allItemPersonCards']})],
   state: {
     count: 0,
     user: {
@@ -40,6 +42,7 @@ const store = new Vuex.Store({
     cardData: {
       id: 0,
     },
+
   },
   mutations: {
     increment(state) {
@@ -73,7 +76,8 @@ const store = new Vuex.Store({
       state.filter.minPrice = payload[0].filterMinPrice
       state.filter.maxPrice = payload[0].filterMaxPrice
       state.filter.partnerType = payload[0].filterPartnerType
-    }
+    },
+
   },
   getters: {},
   actions: {}
