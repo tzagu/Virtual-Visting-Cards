@@ -116,6 +116,8 @@
                             <outputDirectory>src/main/resources/public</outputDirectory>
                             <overwrite>true</overwrite>
                             <resources>
+
+
                                 <resource>
                                     <directory>${project.parent.basedir}/frontend/target/dist</directory>
                                     <includes>

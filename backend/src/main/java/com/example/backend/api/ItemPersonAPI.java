@@ -34,6 +34,7 @@ public class ItemPersonAPI {
     public ResponseEntity<ItemPerson> saveItemPerson(@Validated @RequestBody ItemPerson itemPerson){
         ItemPerson itemPerson1 = itemPersonService.save(itemPerson);
         return new ResponseEntity<ItemPerson>(itemPerson1, new HttpHeaders(), HttpStatus.OK);
+
     }
 }
 

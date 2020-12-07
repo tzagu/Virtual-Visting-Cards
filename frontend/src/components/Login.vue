@@ -36,6 +36,7 @@
             <v-btn type="submit" class="mr-6 mb-3 white--text" color="#513B59"
               >Login</v-btn
             >
+            <div id="google-signin-button"></div>
           </form>
         </v-card-text>
       </v-card>
@@ -64,6 +65,16 @@ export default {
     password: "",
   }),
   methods: {
+    onSignIn(googleUser) {
+      console.log("User is ");
+      const profile = googleUser.getBasicProfile();
+      console.log(profile.getId());
+      console.log(profile.getName());
+      console.log(profile.getGivenName());
+      console.log(profile.getFamilyName());
+      console.log(profile.getImageUrl());
+      console.log(profile.getEmail());
+    },
     login() {
       Axios.get("/partner/" + this.email)
         .then((response) => {
@@ -85,6 +96,9 @@ export default {
     },
   },
   mounted() {
+    gapi.signin2.render('google-signin-button', {
+      onsuccess: this.onSignIn
+    })
     sessionStorage.clear();
     this.$store.commit("setName", "");
     this.$store.commit("setEmail", "");

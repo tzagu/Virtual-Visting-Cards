@@ -34,25 +34,21 @@
   <component name="ChangeListManager">
     <list default="true" id="8bc1d272-ce2b-400e-9617-cef7eef9282f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/api/ItemPersonAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/api/ItemPersonAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ItemPersonCards.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ItemPersonCards.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/SignUp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SignUp.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ToolBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ToolBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/MyDeals.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/MyDeals.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/target/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.df48663de6f5aac5c749d330cdc22bd1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.df48663de6f5aac5c749d330cdc22bd1.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.1e25864a2230b5de42ed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.1e25864a2230b5de42ed.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.ce86f0db3a673a3f5cd5d662afc66af9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.ce86f0db3a673a3f5cd5d662afc66af9.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.109cbd6fe37cc8b02731.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.109cbd6fe37cc8b02731.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/vendor.831d2145e275af8e8674.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/vendor.831d2145e275af8e8674.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/frontend-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/frontend-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/frontend-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/maven-archiver/pom.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
