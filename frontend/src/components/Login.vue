@@ -36,10 +36,14 @@
             <v-btn type="submit" class="mr-6 mb-3 white--text" color="#513B59"
               >Login</v-btn
             >
-            <div id="google-signin-button"></div>
+            <!-- <div id="google-signin-button"></div> -->
           </form>
         </v-card-text>
       </v-card>
+            <v-row>
+        <div class="mt-8 mr-10 grey--text">Sign in with google</div>
+        <div class="mt-8" id="google-signin-button"></div>
+      </v-row>
       <div class="mt-8 grey--text">
         Not a member?
         <a href="/" class="white--text">Signup here</a>
@@ -63,17 +67,32 @@ export default {
   data: () => ({
     email: "",
     password: "",
+    name: ""
   }),
   methods: {
     onSignIn(googleUser) {
-      console.log("User is ");
       const profile = googleUser.getBasicProfile();
-      console.log(profile.getId());
-      console.log(profile.getName());
-      console.log(profile.getGivenName());
-      console.log(profile.getFamilyName());
-      console.log(profile.getImageUrl());
-      console.log(profile.getEmail());
+      this.name = profile.getName();
+      this.email = profile.getEmail();
+      console.log("this.email")
+      console.log(this.email)
+
+      Axios.get("/partner/" + this.email)
+        .then((response) => {
+          console.log(response.data.email)
+          if (
+            this.email === response.data.email
+          ) {
+            this.$store.commit("setUser", response.data);
+            this.$router.push({ name: "ItemPersonCards" });
+          } else {
+            alert("The credentials doesn't match. Please try again");
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
     },
     login() {
       Axios.get("/partner/" + this.email)
@@ -82,9 +101,7 @@ export default {
             this.email === response.data.email &&
             this.password === response.data.password
           ) {
-            this.$store.commit("setName", response.data.name);
-            this.$store.commit("setEmail", response.data.email);
-            this.$store.commit("setUserId", response.data.id);
+            this.$store.commit("setUser", response.data);
             this.$router.push({ name: "ItemPersonCards" });
           } else {
             alert("The credentials doesn't match. Please try again");
@@ -100,9 +117,7 @@ export default {
       onsuccess: this.onSignIn
     })
     sessionStorage.clear();
-    this.$store.commit("setName", "");
-    this.$store.commit("setEmail", "");
-    this.$store.commit("setUserId", "");
+    //this.$store.commit("setUser", null);
   },
 };
 </script>

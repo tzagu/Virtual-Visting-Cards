@@ -32,6 +32,7 @@
                 }}</v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>
+            
           </v-card>
         </v-row>
       </v-col>

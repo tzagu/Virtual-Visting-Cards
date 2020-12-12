@@ -57,6 +57,17 @@ const store = new Vuex.Store({
     setUserId(state, payload) {
       state.user.id = payload
     },
+    setUser(state, payload){
+      state.user.name = payload.name
+      state.user.email = payload.email
+      state.user.id = payload.id
+      state.user.mobile1 = payload.mobile1
+      state.user.mobile2 = payload.mobile2
+      state.user.address = payload.address
+      state.user.landline = payload.landline
+      state.user.joinedDate = payload.joinedDate
+      state.user.status = payload.status
+    },
     setCardId(state, payload) {
       state.cardData.id = payload
     },

@@ -1,7 +1,6 @@
 package com.example.backend.models;
 
-import jdk.jfr.Timestamp;
-import org.springframework.data.annotation.CreatedDate;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -29,8 +28,7 @@ public class Person {
     private String landLine;
 
     @Column
-    @CreatedDate
-    @Timestamp
+    @CreationTimestamp
     private Date joinedDate;
 
     @Column

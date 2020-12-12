@@ -371,6 +371,7 @@ export default {
   },
 
   mounted() {
+    alert("If you have an already created business profile, we recommend you to not add the same items again. Go to My Cards to view your existing business cards!")
     this.personId = this.$store.state.user.id
     console.log("user Id is " + this.personId)
     Axios.get("/categories")

@@ -64,7 +64,4 @@ public class PersonAPI {
         Person person = personService.findByEmail(email);
         return ResponseEntity.ok(person);
     }
-
-
-
 }

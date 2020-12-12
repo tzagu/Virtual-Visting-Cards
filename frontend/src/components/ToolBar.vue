@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar dark dense color="#36213E" class="my-4" flat absolute fixed app>
+  <v-app-bar dark dense color="#36213E" class="my-4" flat absolute fixed app :value="isLoggedIn()">
     <v-btn @click.prevent="showItemPersonCards" icon>
       <v-icon>mdi-home-outline</v-icon>
     </v-btn>
@@ -66,20 +66,25 @@
 export default {
   data() {
     return {
+      username: "",
       options: [
         { icon : "mdi-crown", title: "Become VIP", pageName: "GetVip" },
-        { icon : "mdi-account-card-details", title: "Create business profile", pageName: "CreateProfile" },
+        { icon : "mdi-file-account", title: "Create business profile", pageName: "CreateProfile" },
         { icon : "mdi-comment-account", title: "Contact us", pageName: "ContactUs" },
         { icon : "mdi-rocket", title: "Take a tour", pageName: "Tour" },
       ],
       profile: [
-        {icon : "mdi-account-settings-variant", title: "My cards", pageName: "MyDeals"},
+        {icon: "mdi-account-outline", title: "Edit personal profile", pageName: "EditProfile"},
+        {icon : "mdi-cards", title: "My cards", pageName: "MyDeals"},
         {icon : "mdi-emoticon-sad", title: "Logout", pageName: "Login"}
       ]
     };
   },
 
   methods: {
+    isLoggedIn(){
+      return (this.$store.state.user.id !== 0)
+    },
     activateOption(pageName) {
       console.log("method invoked");
       console.log(pageName);
@@ -100,6 +105,7 @@ export default {
       this.$router.push({ name: "ContactUs" });
     },
   },
+
 };
 </script>
 

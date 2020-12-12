@@ -1,6 +1,9 @@
 package com.example.backend.models;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.*;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +14,10 @@ public class ItemPerson {
     @Id
     @GeneratedValue
     private int id;
+
+    @Column
+    @CreationTimestamp
+    private Date date;
 
     @Column
     private String brand;
@@ -39,7 +46,7 @@ public class ItemPerson {
     public ItemPerson() {
     }
 
-    public ItemPerson(int id, String brand, String deliverTo, int quantity, float price, List<Deals> deals, Item item, Person person)
+    public ItemPerson(int id, String brand, String deliverTo, int quantity, float price, List<Deals> deals, Item item, Person person, Date date)
     {
         this.id = id;
         this.brand = brand;
@@ -49,6 +56,7 @@ public class ItemPerson {
         this.deals = deals;
         this.item = item;
         this.person = person;
+        this.date = date;
     }
 
     public int getId() {
@@ -113,5 +121,13 @@ public class ItemPerson {
 
     public void setPerson(Person person) {
         this.person = person;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }
