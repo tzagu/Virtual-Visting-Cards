@@ -2,6 +2,7 @@ package com.example.backend.api;
 
 
 import com.example.backend.models.Category;
+import com.example.backend.repositories.CategoryRepository;
 import com.example.backend.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -20,10 +21,27 @@ public class CategoryAPI {
     @Autowired
     CategoryService categoryService;
 
+    @Autowired
+    CategoryRepository categoryRepository;
+
     @PostMapping("/savecategory")
     public ResponseEntity<Category> save(@Validated @RequestBody Category category){
         Category category1 = categoryService.save(category);
         return new ResponseEntity<Category>(category, new HttpHeaders(), HttpStatus.OK);
+    }
+
+    @PutMapping("/savecategory/{id}")
+    public ResponseEntity<Category> updateCategory(@RequestBody Category category, @PathVariable int id){
+        Optional<Category> thisCategory = categoryRepository.findById(id);
+        if(thisCategory.isPresent()){
+            Category theCategory = thisCategory.get();
+            theCategory.setName(category.getName());
+            theCategory.setItems(category.getItems());
+            return new ResponseEntity<>(categoryRepository.save(theCategory), HttpStatus.OK);
+        }
+        else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
     @GetMapping("/categories")

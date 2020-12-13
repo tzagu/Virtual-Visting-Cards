@@ -76,10 +76,10 @@
           </v-form>
         </v-card-text>
       </v-card>
-      <v-row>
+      <!-- <v-row>
         <div class="mt-8 mr-10 grey--text">Signup with google </div>
         <div class="mt-8" id="google-signin-button"></div>
-      </v-row>
+      </v-row> -->
       <div class="mt-8 grey--text">
         Already have and account?
         <a href="#/login" class="white--text">Login</a>
@@ -111,34 +111,34 @@ export default {
   }),
 
   methods: {
-    onSignIn(googleUser) {
-      const profile = googleUser.getBasicProfile();
-      this.name = profile.getName();
-      this.email = profile.getEmail();
+    // onSignIn(googleUser) {
+    //   const profile = googleUser.getBasicProfile();
+    //   this.name = profile.getName();
+    //   this.email = profile.getEmail();
 
-      axios.get("/partner/" + this.email).then((response) => {
-        if (response.data === "") {
-          axios
-            .post("/saveperson", {
-              email: this.email,
-              name: this.name,
-            })
-            .then((response) => {
-              console.log(response);
-              this.$store.commit("setUser", response.data);
-              this.$router.push({ name: "ItemPersonCards" });
-            })
-            .catch((error) => {
-              console.log(error);
-            });
-        } else {
-          alert(
-            "A user from this email already exists. Please sign in or use a different email address."
-          );
-          document.getElementById("email").focus();
-        }
-      });
-    },
+    //   axios.get("/partner/" + this.email).then((response) => {
+    //     if (response.data === "") {
+    //       axios
+    //         .post("/saveperson", {
+    //           email: this.email,
+    //           name: this.name,
+    //         })
+    //         .then((response) => {
+    //           console.log(response);
+    //           this.$store.commit("setUser", response.data);
+    //           this.$router.push({ name: "ItemPersonCards" });
+    //         })
+    //         .catch((error) => {
+    //           console.log(error);
+    //         });
+    //     } else {
+    //       alert(
+    //         "A user from this email already exists. Please sign in or use a different email address."
+    //       );
+    //       document.getElementById("email").focus();
+    //     }
+    //   });
+    // },
     validate() {
       this.$refs.form.validate();
     },
@@ -182,9 +182,9 @@ export default {
     },
   },
   mounted() {
-    gapi.signin2.render("google-signin-button", {
-      onsuccess: this.onSignIn,
-    });
+    // gapi.signin2.render("google-signin-button", {
+    //   onsuccess: this.onSignIn,
+    // });
     sessionStorage.clear();
   },
 };

@@ -8,7 +8,8 @@ import Filter from '@/pages/Filter.vue'
 import CardClicked from '@/pages/CardClicked.vue'
 import MyDeals from '@/pages/MyDeals.vue'
 import ContactUs from '@/components/ContactUs.vue'
-import EditProfile from '@/pages/EditProfile'
+import EditProfile from '@/pages/EditProfile.vue'
+import AddItems from '@/pages/AddItems.vue'
 
 
 Vue.use(Router)
@@ -66,6 +67,11 @@ export default new Router({
       path: '/editprofile',
       name: 'EditProfile',
       component: EditProfile
+    },
+    {
+      path: '/addItems',
+      name: 'AddItems',
+      component: AddItems
     },
 
   ]

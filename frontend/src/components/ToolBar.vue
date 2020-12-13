@@ -38,6 +38,10 @@
       </v-list>
     </v-menu>
 
+    <v-btn @click.prevent="addItem" v-if="isAdmin()">
+      <v-icon>mdi-security</v-icon>
+    </v-btn>
+
     <v-menu left bottom>
       <template v-slot:activator="{ on, attrs }">
         <v-btn v-bind="attrs" v-on="on" icon>
@@ -82,6 +86,16 @@ export default {
   },
 
   methods: {
+    //if user is admin, return true
+    isAdmin(){
+      return this.$store.state.user.email === "tzaguyapa@gmail.com"
+    },
+
+    //show add items and category page
+    addItem(){
+      this.$router.push({name: "AddItems"})
+    },
+
     isLoggedIn(){
       return (this.$store.state.user.id !== 0)
     },

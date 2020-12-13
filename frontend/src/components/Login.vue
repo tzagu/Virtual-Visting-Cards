@@ -40,10 +40,10 @@
           </form>
         </v-card-text>
       </v-card>
-            <v-row>
+            <!-- <v-row>
         <div class="mt-8 mr-10 grey--text">Sign in with google</div>
         <div class="mt-8" id="google-signin-button"></div>
-      </v-row>
+      </v-row> -->
       <div class="mt-8 grey--text">
         Not a member?
         <a href="/" class="white--text">Signup here</a>
@@ -70,30 +70,30 @@ export default {
     name: ""
   }),
   methods: {
-    onSignIn(googleUser) {
-      const profile = googleUser.getBasicProfile();
-      this.name = profile.getName();
-      this.email = profile.getEmail();
-      console.log("this.email")
-      console.log(this.email)
+    // onSignIn(googleUser) {
+    //   const profile = googleUser.getBasicProfile();
+    //   this.name = profile.getName();
+    //   this.email = profile.getEmail();
+    //   console.log("this.email")
+    //   console.log(this.email)
 
-      Axios.get("/partner/" + this.email)
-        .then((response) => {
-          console.log(response.data.email)
-          if (
-            this.email === response.data.email
-          ) {
-            this.$store.commit("setUser", response.data);
-            this.$router.push({ name: "ItemPersonCards" });
-          } else {
-            alert("The credentials doesn't match. Please try again");
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+    //   Axios.get("/partner/" + this.email)
+    //     .then((response) => {
+    //       console.log(response.data.email)
+    //       if (
+    //         this.email === response.data.email
+    //       ) {
+    //         this.$store.commit("setUser", response.data);
+    //         this.$router.push({ name: "ItemPersonCards" });
+    //       } else {
+    //         alert("The credentials doesn't match. Please try again");
+    //       }
+    //     })
+    //     .catch((error) => {
+    //       console.log(error);
+    //     });
 
-    },
+    // },
     login() {
       Axios.get("/partner/" + this.email)
         .then((response) => {
@@ -112,10 +112,11 @@ export default {
         });
     },
   },
+
   mounted() {
-    gapi.signin2.render('google-signin-button', {
-      onsuccess: this.onSignIn
-    })
+    // gapi.signin2.render('google-signin-button', {
+    //   onsuccess: this.onSignIn
+    // })
     sessionStorage.clear();
     //this.$store.commit("setUser", null);
   },
