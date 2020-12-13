@@ -1,6 +1,6 @@
 <template>
   <v-row align="center" justify="center">
-    <v-card class="pa-10 fill-height">
+    <v-card class="pa-4 mx-1 fill-height">
       <v-row>
         <v-col
           ><v-row>
@@ -83,7 +83,7 @@
 
                             <v-card class="pa-8">
                               <v-card-title class="headline grey lighten-2">
-                                Contact partner via email
+                                Contact partner
                               </v-card-title>
 
                               <v-form @submit.prevent="sendMail">
@@ -138,7 +138,7 @@
                           <v-dialog v-model="dialog4">
                             <template v-slot:activator="{ on, attrs }">
                               <v-btn v-bind="attrs" v-on="on" color="#36213e" class="white--text">
-                                Contact via mobile
+                                Call
                               </v-btn>
                             </template>
                             <v-card class="pa-8">

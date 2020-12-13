@@ -40,16 +40,30 @@
           </form>
         </v-card-text>
       </v-card>
-            <!-- <v-row>
+      <!-- <v-row>
         <div class="mt-8 mr-10 grey--text">Sign in with google</div>
         <div class="mt-8" id="google-signin-button"></div>
       </v-row> -->
       <div class="mt-8 grey--text">
         Not a member?
         <a href="/" class="white--text">Signup here</a>
-        <!-- showSignupPage method should be added to render the page instead of giving a link path -->
+      </div>
+      <div class="mt-8 grey--text">
+        Having Trouble? 
+        <a href="#/forgotpassword" class="white--text">Forgot password</a>
       </div>
     </v-col>
+        <v-snackbar
+    :value="snackbar"
+      v-model="snackbar"
+      :timeout="timeout"
+      shaped
+      top
+      color="blue-grey"
+      transition="fab-transition"
+    >
+      {{ text }}
+    </v-snackbar>
   </v-row>
 </template>
 
@@ -67,7 +81,10 @@ export default {
   data: () => ({
     email: "",
     password: "",
-    name: ""
+    name: "",
+    snackbar: false,
+      text: "The credentials doesn't match. Please try again",
+      timeout: 5000,
   }),
   methods: {
     // onSignIn(googleUser) {
@@ -104,7 +121,7 @@ export default {
             this.$store.commit("setUser", response.data);
             this.$router.push({ name: "ItemPersonCards" });
           } else {
-            alert("The credentials doesn't match. Please try again");
+            this.snackbar = true
           }
         })
         .catch((error) => {

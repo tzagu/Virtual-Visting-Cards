@@ -85,6 +85,17 @@
         <a href="#/login" class="white--text">Login</a>
       </div>
     </v-col>
+        <v-snackbar
+    :value="snackbar"
+      v-model="snackbar"
+      :timeout="timeout"
+      shaped
+      top
+      color="blue-grey"
+      transition="fab-transition"
+    >
+      {{ text }}
+    </v-snackbar>
   </v-row>
 </template>
 
@@ -106,8 +117,10 @@ export default {
     password: "",
     confirmpassword: "",
     name: "",
-
     checkbox: false,
+    snackbar: false,
+      text: "",
+      timeout: 5000,
   }),
 
   methods: {
@@ -165,16 +178,16 @@ export default {
               })
               .then((response) => {
                 console.log(response);
-                alert("For validation purposes, Please login")
+                this.text = "For validation purposes, Please login"
+                this.snackbar = true
                 this.$router.push({ name: "Login" });
               })
               .catch((error) => {
                 console.log(error);
               });
           } else {
-            alert(
-              "A user from this email already exists. Please use a different email address."
-            );
+            this.text = "A user from this email already exists. Please use a different email address."
+            this.snackbar = true
             document.getElementById("email").focus();
           }
         });

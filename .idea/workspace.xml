@@ -33,22 +33,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bc1d272-ce2b-400e-9617-cef7eef9282f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/application-prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/api/CategoryAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/api/CategoryAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/api/PersonAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/api/PersonAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/greygoldvector.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/square.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ContactUs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ContactUs.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ItemPersonCards.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ItemPersonCards.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SignUp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SignUp.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ToolBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ToolBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AddItems.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/AddItems.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/CardClicked.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/CardClicked.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/target/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.169426c309b384e7259cd2dab8609d32.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.169426c309b384e7259cd2dab8609d32.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.d3108f02fcd97a9b85eb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.d3108f02fcd97a9b85eb.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.a3356715dc16e9af54420fcebdd383a5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.a3356715dc16e9af54420fcebdd383a5.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.36220395c13edcef76dc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.36220395c13edcef76dc.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/target/frontend-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/frontend-0.0.1-SNAPSHOT.jar" afterDir="false" />
     </list>

@@ -47,6 +47,19 @@ public class PersonAPI {
         }
     }
 
+    @PutMapping("/resetpw/{id}")
+    public ResponseEntity<Person> resetPassword(@RequestBody Person person, @PathVariable int id){
+        Optional<Person> thisPerson = personRepository.findById(id);
+        if(thisPerson.isPresent()){
+            Person thePerson = thisPerson.get();
+            thePerson.setPassword(person.getPassword());
+            return new ResponseEntity<>(personRepository.save(thePerson), HttpStatus.OK);
+        }
+        else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
     @GetMapping("/person")
     public ResponseEntity<List<Person>> findAll(){
         List<Person> personList = personService.findAll();

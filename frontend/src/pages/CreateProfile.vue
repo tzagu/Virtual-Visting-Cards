@@ -1,5 +1,17 @@
 <template>
         <v-row align="center" justify="center" class="mt-12">
+          <v-alert
+      :value="alert"
+      v-model="alert"
+      color="blue-grey"
+      dark
+      icon="mdi-account-alert"
+      transition="scale-transition"
+      dismissible
+      outlined
+      text
+    >If you have an already created business profile, we recommend you to not add the same items again. Go to My Cards to view your existing business cards!
+    </v-alert>
           <v-row>
           <v-col class="pa-0">
             <v-card flat tile class="gradiant pa-8 mx-8" max-width="1000px">
@@ -272,6 +284,7 @@ export default {
         "Trincomalee",
         "Vavuniya",
       ],
+      alert: false,
     };
   },
   methods: {
@@ -371,7 +384,7 @@ export default {
   },
 
   mounted() {
-    alert("If you have an already created business profile, we recommend you to not add the same items again. Go to My Cards to view your existing business cards!")
+    this.alert = true
     this.personId = this.$store.state.user.id
     console.log("user Id is " + this.personId)
     Axios.get("/categories")

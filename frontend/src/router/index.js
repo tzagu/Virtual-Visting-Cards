@@ -10,6 +10,9 @@ import MyDeals from '@/pages/MyDeals.vue'
 import ContactUs from '@/components/ContactUs.vue'
 import EditProfile from '@/pages/EditProfile.vue'
 import AddItems from '@/pages/AddItems.vue'
+import GetVip from '@/pages/GetVip.vue'
+import ForgotPassword from '@/pages/ForgotPassword.vue'
+import ResetForm from '@/pages/bcard-pwr-secure/eb-caroli-resetvalidate/user-form.vue'
 
 
 Vue.use(Router)
@@ -69,9 +72,24 @@ export default new Router({
       component: EditProfile
     },
     {
-      path: '/addItems',
+      path: '/additems',
       name: 'AddItems',
       component: AddItems
+    },
+    {
+      path: '/getvip',
+      name: 'GetVip',
+      component: GetVip
+    },
+    {
+      path: '/forgotpassword',
+      name: 'ForgotPassword',
+      component: ForgotPassword
+    },
+    {
+      path: '/bcard-pwr-secure/eb-caroli-resetvalidate/user-form',
+      name: 'ResetForm',
+      component: ResetForm
     },
 
   ]

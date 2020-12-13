@@ -136,6 +136,7 @@ export default {
         console.log(this.postingObject)
       Axios.post("/savecategory", this.postingObject)
         .then((response) => {
+          this.postingItems = []
           console.log(response);
         })
         .catch((error) => {

@@ -1,5 +1,5 @@
 <template>
-  <v-row align="center" justify="center">
+  <v-row align="center" justify="center" class="fill-height">
     <v-card class="pa-6">
       <p>Give us a shout! Your opinion is appreciated</p>
       <p>Need to contact? Send us a message</p>
@@ -31,6 +31,19 @@
         <v-btn @click.prevent="contactUs" color="#36213e" class="white--text"> Send </v-btn>
       </v-card-actions>
     </v-card>
+
+    <v-snackbar
+    :value="snackbar"
+      v-model="snackbar"
+      :timeout="timeout"
+      shaped
+      top
+      color="blue-grey"
+      transition="fab-transition"
+    >
+      {{ text }}
+    </v-snackbar>
+
   </v-row>
 </template>
 
@@ -43,6 +56,9 @@ export default {
       senderName: "",
       senderEmail: "",
       message: "",
+      snackbar: false,
+      text: "Thank you for contacting us!",
+      timeout: 5000,
     };
   },
   mounted() {
@@ -51,6 +67,7 @@ export default {
   },
   methods: {
     contactUs() {
+      this.snackbar = true
       Axios.post("/contactpartner", {
         to: "linetcoservices@gmail.com",
         replyTo: this.senderEmail,
@@ -60,7 +77,6 @@ export default {
         .catch((error) => {
           console.log(error);
         });
-        alert("Thank you for contacting us!")
         this.$router.push({name: "ItemPersonCards"})
     },
   },
