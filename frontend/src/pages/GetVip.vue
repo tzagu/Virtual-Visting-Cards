@@ -61,6 +61,6 @@ export default {};
   left: 0;
   background: url("../assets/1598971.jpg") no-repeat center center;
   background-size: cover;
-  background-color: red;
+  background-color:  #36213e;
 }
 </style>
