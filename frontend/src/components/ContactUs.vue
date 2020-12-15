@@ -31,19 +31,6 @@
         <v-btn @click.prevent="contactUs" color="#36213e" class="white--text"> Send </v-btn>
       </v-card-actions>
     </v-card>
-
-    <v-snackbar
-    :value="snackbar"
-      v-model="snackbar"
-      :timeout="timeout"
-      shaped
-      top
-      color="blue-grey"
-      transition="fab-transition"
-    >
-      {{ text }}
-    </v-snackbar>
-
   </v-row>
 </template>
 
@@ -56,9 +43,6 @@ export default {
       senderName: "",
       senderEmail: "",
       message: "",
-      snackbar: false,
-      text: "Thank you for contacting us!",
-      timeout: 5000,
     };
   },
   mounted() {
@@ -67,7 +51,7 @@ export default {
   },
   methods: {
     contactUs() {
-      this.snackbar = true
+      this.$swal("Sent! ", "Thank you for contacting us", "success", {button: "Done"});
       Axios.post("/contactpartner", {
         to: "linetcoservices@gmail.com",
         replyTo: this.senderEmail,

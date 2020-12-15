@@ -6,8 +6,10 @@ import router from './router'
 import vuetify from '@/plugins/vuetify'
 import Vuex from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
+import VueSweetalert2 from 'vue-sweetalert2'
 
 Vue.use(Vuex);
+Vue.use(VueSweetalert2);
 
 const store = new Vuex.Store({
   plugins: [createPersistedState({storage: window.sessionStorage, paths: ['user', 'allItemPersonCards']})],
@@ -99,5 +101,5 @@ new Vue({
   vuetify,
   components: { App },
   template: '<App/>',
-  store
+  store,
 })

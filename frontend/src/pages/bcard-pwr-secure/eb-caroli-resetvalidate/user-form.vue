@@ -30,7 +30,9 @@
               label="Password"
               name="password"
               prepend-icon="mdi-lock"
-              type="password"
+              :append-icon="show3 ? 'mdi-eye' : 'mdi-eye-off'"
+            :type="show3 ? 'text' : 'password'"
+              @click:append="show3 = !show3"
             ></v-text-field>
 
             <v-text-field
@@ -55,7 +57,7 @@
       :timeout="timeout"
       shaped
       top
-      color="blue-grey"
+      color="red"
       transition="fab-transition"
     >
       {{ text }}
@@ -69,6 +71,7 @@ import axios from 'axios'
 export default {
   data() {
     return {
+      show3: false,
       userId: 0,
       email: "",
       password: "",
@@ -90,8 +93,7 @@ export default {
                 password: this.confirmpassword,
               })
               .then((response) => {
-                this.text = "Password reset successfull. Please login to continue"
-                this.snackbar = true
+                this.$swal("Successful! ", "Please login to continue", "success", {button: "Login"});
                 console.log(response);
                 this.$router.replace({name: "Login"})
               })

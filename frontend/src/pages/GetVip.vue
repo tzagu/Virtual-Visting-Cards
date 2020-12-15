@@ -2,7 +2,7 @@
   <v-main class="bgimage" style="padding: 0px 0px 0px">
     <v-row class="fill-height" align="center" justify="center">
       <v-row>
-        <v-col class="text-center gradiant" cols="12">
+        <v-col class="text-center gradiant ma-2 pa-2" cols="12">
           <h1 class="mb-4 white--text">VIP B Cards</h1>
           <h3 class="subheading white--text">
             Great Day {{ this.$store.state.user.name }} !
@@ -18,7 +18,7 @@
             <ul>
               <li>Has been an active B Card user for more than 12 months</li>
               <li>
-                Successfully contacted more than 6 partners through B Card
+                Successfully contacted more than 12 partners through B Card
                 platform
               </li>
               <li>

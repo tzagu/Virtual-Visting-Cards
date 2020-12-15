@@ -60,7 +60,7 @@
                   </template>
 
                   <v-card>
-                    <v-card-title class="headline grey lighten-2">
+                    <v-card-title class="headline purple darken-3">
                       Contact partner
                     </v-card-title>
 
@@ -82,7 +82,7 @@
                             </template>
 
                             <v-card class="pa-8">
-                              <v-card-title class="headline grey lighten-2">
+                              <v-card-title class="headline purple darken-3">
                                 Contact partner
                               </v-card-title>
 
@@ -141,6 +141,8 @@
                                 Call
                               </v-btn>
                             </template>
+                            <v-row align="center" justify="center">
+                              <v-col>
                             <v-card class="pa-8">
                               <v-card-title class="headline grey lighten-2">Contact via mobile</v-card-title>
                               <v-text-field
@@ -159,6 +161,8 @@
                                   :value="itemperson.landline"
                                 ></v-text-field>
                             </v-card>
+                            </v-col>
+                            </v-row>
                           </v-dialog>
                         </div>
                       </template>
@@ -255,6 +259,17 @@
         </v-col>
       </v-row>
     </v-card>
+    <v-snackbar
+    :value="snackbar"
+      v-model="snackbar"
+      :timeout="timeout"
+      shaped
+      top
+      color="blue-grey"
+      transition="fab-transition"
+    >
+      {{ text }}
+    </v-snackbar>
   </v-row>
 </template>
 
@@ -263,6 +278,10 @@ import Axios from "axios";
 
 export default {
   data: () => ({
+        snackbar: false,
+      text: "",
+      timeout: 5000,
+      
     selectedCardId: 0,
     userEmail: "",
     userName: "",
@@ -298,6 +317,8 @@ export default {
     
       this.dialog3 = false;
       this.dialog = false;
+      this.text = "Mail sent !"
+            this.snackbar = true
       //this.$router.push({name: "ItemPersonCards"})
     },
   },

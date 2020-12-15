@@ -61,7 +61,7 @@ export default {
       splicingItemPerson: [], //used to temporarily save the response objects and filter data to the itemPerson array
       tempArray: [],
       snackbar: false,
-      text: "Only premium members can view a person profile",
+      text: "",
       timeout: 5000,
     };
   },
@@ -71,6 +71,13 @@ export default {
       return axios
         .get("/itempersoncards")
         .then((response) => {
+          if(response.data.length == 0){
+            this.text = "No data for your filter"
+            this.snackbar = true
+          }
+          else{
+            //Go outside an stare at the sky until a star comes down
+          }
           for (let i = 0; i < response.data.length; i++) {
             this.$store.commit("setAllItemPersonCards", response.data[i]);
           }
@@ -209,6 +216,7 @@ export default {
       console.log(this.$store.state.user.name + " logged in");
     },
     showAlert(){
+      this.text = "Only premium members can view a person profile"
       this.snackbar = true
     }
   },

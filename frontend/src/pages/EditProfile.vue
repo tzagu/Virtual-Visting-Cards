@@ -55,9 +55,10 @@
               label="Work number"
               :value="landLine"
             ></v-text-field>
+            <v-card-actions>
 <v-row>
 
-            <v-btn type="submit" class="mr-6 mb-3 white--text" color="#513B59"
+            <v-btn type="submit" class="ml-6 mb-3 white--text" color="#513B59"
               >Save</v-btn
             >
             <v-spacer></v-spacer>
@@ -66,6 +67,7 @@
               >Back</v-btn
             >
 </v-row>
+</v-card-actions>
             <div>
               Go to <a href="#/mydeals">My Cards</a> to alter your existing
               business cards
@@ -74,6 +76,17 @@
         </v-card-text>
       </v-card>
     </v-col>
+    <v-snackbar
+    :value="snackbar"
+      v-model="snackbar"
+      :timeout="timeout"
+      shaped
+      top
+      color="green"
+      transition="fab-transition"
+    >
+      {{ text }}
+    </v-snackbar>
   </v-row>
 </template>
 
@@ -88,6 +101,9 @@ export default {
       mobile1: "",
       mobile2: "",
       landline: "",
+          snackbar: false,
+      text: "",
+      timeout: 5000,
     };
   },
   methods: {
@@ -101,6 +117,8 @@ export default {
       })
         .then((response) => {
           console.log(response);
+          this.text = "Saved!"
+            this.snackbar = true
         })
         .catch((error) => {
           console.log(error);

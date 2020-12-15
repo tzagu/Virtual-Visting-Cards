@@ -1,7 +1,7 @@
 <template>
 <v-row align="center" justify="center">
         <v-card>
-          <v-form class="ma-4 pa-8">
+          <v-form class="ma-4 pa-4">
             <v-row>
               <v-col>
                 <h3>Filter results</h3>

@@ -38,13 +38,15 @@
             ></v-text-field>
 
             <v-text-field
+              :append-icon="show3 ? 'mdi-eye' : 'mdi-eye-off'"
+              :type="show3 ? 'text' : 'password'"
+              @click:append="show3 = !show3"
               v-model="password"
               class="px-6"
               id="password"
               label="Password"
               name="password"
               prepend-icon="mdi-lock"
-              type="password"
             ></v-text-field>
 
             <v-text-field
@@ -84,18 +86,12 @@
         Already have and account?
         <a href="#/login" class="white--text">Login</a>
       </div>
+      <div>
+        <router-link :to="{ name: 'Login' }" target="_blank">
+          Link Text
+        </router-link>
+      </div>
     </v-col>
-        <v-snackbar
-    :value="snackbar"
-      v-model="snackbar"
-      :timeout="timeout"
-      shaped
-      top
-      color="blue-grey"
-      transition="fab-transition"
-    >
-      {{ text }}
-    </v-snackbar>
   </v-row>
 </template>
 
@@ -113,14 +109,12 @@ export default {
   },
 
   data: () => ({
+    show3: false,
     email: "",
     password: "",
     confirmpassword: "",
     name: "",
     checkbox: false,
-    snackbar: false,
-      text: "",
-      timeout: 5000,
   }),
 
   methods: {
@@ -178,16 +172,16 @@ export default {
               })
               .then((response) => {
                 console.log(response);
-                this.text = "For validation purposes, Please login"
-                this.snackbar = true
+                this.$swal({ icon: "success", timer: 3000 });
                 this.$router.push({ name: "Login" });
               })
               .catch((error) => {
                 console.log(error);
               });
           } else {
-            this.text = "A user from this email already exists. Please use a different email address."
-            this.snackbar = true
+            this.text =
+              "A user from this email already exists. Please use a different email address.";
+            this.snackbar = true;
             document.getElementById("email").focus();
           }
         });

@@ -43,6 +43,17 @@
 
 </v-card>
           </v-col>
+          <v-snackbar
+    :value="snackbar"
+      v-model="snackbar"
+      :timeout="timeout"
+      shaped
+      top
+      color="green"
+      transition="fab-transition"
+    >
+      {{ text }}
+    </v-snackbar>
       </v-row>
 
   </v-container>
@@ -53,6 +64,9 @@ import Axios from "axios";
 export default {
   data() {
     return {
+          snackbar: false,
+      text: "",
+      timeout: 5000,
       selectedCategory: "",
       selectedItems: [],
       singleItem: "",
@@ -138,6 +152,8 @@ export default {
         .then((response) => {
           this.postingItems = []
           console.log(response);
+          this.text = "Saved"
+            this.snackbar = true
         })
         .catch((error) => {
           console.log(error);

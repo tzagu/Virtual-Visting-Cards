@@ -14,7 +14,7 @@
             <v-text-field
               class="px-6 mt-6"
               v-model="email"
-              prepend-icon="mdi-account"
+              prepend-icon="mdi-email"
               :rules="[
                 (v) => !!v || 'E-mail is required',
                 (v) => /.+@.+\..+/.test(v) || 'E-mail must be valid',
@@ -37,7 +37,7 @@
       color="blue-grey"
       transition="fab-transition"
     >
-      {{ text }}
+      {{ alert }}
     </v-snackbar>
   </v-row>
 </template>
@@ -51,7 +51,7 @@ export default {
       message:
         "Hi, \n You have requested to reset the password to your B Card account. Please click the link below to accept and reset the password. \n http://localhost:8080/#/bcard-pwr-secure/eb-caroli-resetvalidate/user-form",
         snackbar: false,
-      text: "Password reset link sent to your email !",
+      alert: "Password reset link sent to your email !",
       timeout: 5000,
     };
   },

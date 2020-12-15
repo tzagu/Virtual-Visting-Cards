@@ -24,13 +24,15 @@
             ></v-text-field>
 
             <v-text-field
+            :append-icon="show3 ? 'mdi-eye' : 'mdi-eye-off'"
               v-model="password"
               class="px-6 mt-6"
               id="password"
               label="Password"
               name="password"
               prepend-icon="mdi-lock"
-              type="password"
+              :type="show3 ? 'text' : 'password'"
+              @click:append="show3 = !show3"
             ></v-text-field>
 
             <v-btn type="submit" class="mr-6 mb-3 white--text" color="#513B59"
@@ -79,6 +81,7 @@ export default {
   },
 
   data: () => ({
+    show3: false,
     email: "",
     password: "",
     name: "",

@@ -328,6 +328,7 @@ export default {
            item: {
              id: this.id},
         }).then((response) => {
+          this.$swal("Done! ", "Your business cards has been added", "success", {timer: 3000,});
           console.log(response)
           })
           .catch((error) => {
