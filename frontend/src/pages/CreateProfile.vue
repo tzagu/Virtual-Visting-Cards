@@ -289,7 +289,6 @@ export default {
   },
   methods: {
     createProfile(personId) {
-      console.log("when creating the profile, person id is " + personId)
       Axios.put("/person/" + personId, {
         type: this.type,
         address: this.location,
@@ -298,23 +297,19 @@ export default {
         landline: this.landline,
       })
         .then((response) => {
-          console.log(response);
+          console.log("");
         })
         .catch((error) => {
           console.log(error);
         });
-        console.log("selected items are")
-      console.log(this.selectedItems);
 
       for (let n = 0; n < this.selectedItems.length; n++) {                     //looping through the selected items and adding them to the itemperson table
         for (let i = 0; i < this.categorisedItems.length; i++) {
           for (let j = 0; j < this.categorisedItems[i].stuff.length; j++) {
-            console.log(this.selectedItems[n].item +" "+ this.categorisedItems[i].stuff[j])
             if ((this.selectedItems[n].item) === this.categorisedItems[i].stuff[j]) {
-              console.log("--------------------- WORKED!-------------------")
               this.id = this.categorisedItems[i].ids[j];
             } else {
-              console.log("--------------------- Passed else -------------------")
+              console.log("")
             }
           }
         }
@@ -329,7 +324,6 @@ export default {
              id: this.id},
         }).then((response) => {
           this.$swal("Done! ", "Your business cards has been added", "success", {timer: 3000,});
-          console.log(response)
           })
           .catch((error) => {
             console.log(error);
@@ -387,7 +381,6 @@ export default {
   mounted() {
     this.alert = true
     this.personId = this.$store.state.user.id
-    console.log("user Id is " + this.personId)
     Axios.get("/categories")
       .then((response) => {
 
@@ -406,8 +399,6 @@ export default {
           this.categorisedItems.push(this.obj);
           this.obj = {};
         }
-        console.log("categorised items are ")
-        console.log(this.$store.state.categoryItems)
       })
       .catch((e) => {
         console.log(e);

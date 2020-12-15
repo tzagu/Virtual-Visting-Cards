@@ -2,7 +2,7 @@
   <v-row align="center" justify="center">
     <v-col cols="12" sm="8" md="4">
       <v-card class="elevation-24">
-        <v-toolbar color="#513B59" dark flat>
+        <v-toolbar color="#36213e" dark flat>
           <v-toolbar-title>Login</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-tooltip bottom>
@@ -35,7 +35,7 @@
               @click:append="show3 = !show3"
             ></v-text-field>
 
-            <v-btn type="submit" class="mr-6 mb-3 white--text" color="#513B59"
+            <v-btn type="submit" class="mr-6 mb-3 white--text" color="#36213e"
               >Login</v-btn
             >
             <!-- <div id="google-signin-button"></div> -->

@@ -94,7 +94,6 @@ export default {
               })
               .then((response) => {
                 this.$swal("Successful! ", "Please login to continue", "success", {button: "Login"});
-                console.log(response);
                 this.$router.replace({name: "Login"})
               })
               .catch((error) => {

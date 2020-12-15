@@ -2,7 +2,7 @@
   <v-row align="center" justify="center">
     <v-col cols="12" sm="8" md="4">
       <v-card class="elevation-24">
-        <v-toolbar color="#513B59" dark flat>
+        <v-toolbar color="#36213e" dark flat>
           <v-toolbar-title>Signup</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-tooltip bottom>
@@ -64,14 +64,48 @@
               class="px-6"
               v-model="checkbox"
               :rules="[(v) => !!v || 'You must agree to continue!']"
-              label="Agree to terms and conditions"
               required
-            ></v-checkbox>
+            >
+              <template v-slot:label>
+                <div>
+                  I have read, consent and agree to the B Card
+                  <v-tooltip bottom>
+                    <template v-slot:activator="{ on }">
+                      <a
+                      class="grey--text"
+                        target="_blank"
+                        href="https://tzaguyapa.blogspot.com/2017/01/the-best-way-to-have-best-on-your.html"
+                        @click.stop
+                        v-on="on"
+                      >
+                        User agreement
+                      </a>
+                    </template>
+                    Read terms and conditions
+                  </v-tooltip>
+                  and 
+                  <v-tooltip bottom>
+                    <template v-slot:activator="{ on }">
+                      <a
+                      class="grey--text"
+                        target="_blank"
+                        href="https://tzaguyapa.blogspot.com/2017/01/the-best-way-to-have-best-on-your.html"
+                        @click.stop
+                        v-on="on"
+                      >
+                        Privacy policy
+                      </a>
+                    </template>
+                    Read privacy policy
+                  </v-tooltip>
+                </div>
+              </template>
+            </v-checkbox>
             <v-btn
               type="submit"
               @click="validate"
               class="mr-6 mb-3 white--text"
-              color="#513B59"
+              color="#36213e"
               >Signup</v-btn
             >
             <!-- <div id="google-signin-button"></div> -->
@@ -86,11 +120,7 @@
         Already have and account?
         <a href="#/login" class="white--text">Login</a>
       </div>
-      <div>
-        <router-link :to="{ name: 'Login' }" target="_blank">
-          Link Text
-        </router-link>
-      </div>
+      <div></div>
     </v-col>
   </v-row>
 </template>
@@ -171,7 +201,6 @@ export default {
                 name: this.name,
               })
               .then((response) => {
-                console.log(response);
                 this.$swal({ icon: "success", timer: 3000 });
                 this.$router.push({ name: "Login" });
               })

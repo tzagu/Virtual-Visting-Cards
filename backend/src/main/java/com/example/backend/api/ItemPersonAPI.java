@@ -1,6 +1,7 @@
 package com.example.backend.api;
 
 import com.example.backend.models.ItemPerson;
+import com.example.backend.repositories.ItemPersonRepository;
 import com.example.backend.services.ItemPersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -19,6 +20,9 @@ public class ItemPersonAPI {
     @Autowired
     ItemPersonService itemPersonService;
 
+    @Autowired
+    ItemPersonRepository itemPersonRepository;
+
     @GetMapping("/itempersoncards")
     public ResponseEntity<List<ItemPerson>> findAll() {
         List<ItemPerson> itemPersonList = itemPersonService.findAll();
@@ -35,6 +39,19 @@ public class ItemPersonAPI {
         ItemPerson itemPerson1 = itemPersonService.save(itemPerson);
         return new ResponseEntity<ItemPerson>(itemPerson1, new HttpHeaders(), HttpStatus.OK);
 
+    }
+
+    @PutMapping("/rateCard/{id}")
+    public ResponseEntity<ItemPerson> addItemPersonRating(@RequestBody ItemPerson itemPerson, @PathVariable int id){
+        Optional<ItemPerson> thisItemPerson = itemPersonRepository.findById(id);
+        if(thisItemPerson.isPresent()){
+            ItemPerson theItemPerson = thisItemPerson.get();
+            theItemPerson.setRating(itemPerson.getRating());
+            return new ResponseEntity<>(itemPersonRepository.save(theItemPerson), HttpStatus.OK);
+        }
+        else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 }
 

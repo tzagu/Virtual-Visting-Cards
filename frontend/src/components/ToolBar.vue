@@ -100,8 +100,6 @@ export default {
       return (this.$store.state.user.id !== 0)
     },
     activateOption(pageName) {
-      console.log("method invoked");
-      console.log(pageName);
       this.$router.push({ name: pageName });
     },
     showItemPersonCards() {

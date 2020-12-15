@@ -31,6 +31,9 @@ public class ItemPerson {
     @Column
     private float price;
 
+    @Column
+    private int rating;
+
     @OneToMany(targetEntity = Deals.class)
     @JoinColumn(name = "itemPersonId", referencedColumnName = "id")
     private List<Deals> deals = new ArrayList<>();
@@ -46,7 +49,7 @@ public class ItemPerson {
     public ItemPerson() {
     }
 
-    public ItemPerson(int id, String brand, String deliverTo, int quantity, float price, List<Deals> deals, Item item, Person person, Date date)
+    public ItemPerson(int id, String brand, String deliverTo, int quantity, float price, List<Deals> deals, Item item, Person person, Date date, int rating)
     {
         this.id = id;
         this.brand = brand;
@@ -57,6 +60,7 @@ public class ItemPerson {
         this.item = item;
         this.person = person;
         this.date = date;
+        this.rating = rating;
     }
 
     public int getId() {
@@ -129,5 +133,13 @@ public class ItemPerson {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
     }
 }

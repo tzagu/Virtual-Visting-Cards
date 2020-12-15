@@ -26,7 +26,7 @@
 
               <v-card-actions>
                 <v-btn
-                  class="grey--text"
+                  color="#36213e"
                   text
                   @click.prevent="cardDetails(itemPerson.id)"
                   >Details</v-btn
@@ -67,7 +67,6 @@ export default {
   },
   methods: {
     getAllCardsFromAxios() {
-      console.log("calling axios ...");
       return axios
         .get("/itempersoncards")
         .then((response) => {
@@ -81,7 +80,6 @@ export default {
           for (let i = 0; i < response.data.length; i++) {
             this.$store.commit("setAllItemPersonCards", response.data[i]);
           }
-          console.log(this.$store.state.allItemPersonCards);
 
           if (this.$store.state.filter.filtered === false) {
             this.showAllCards();
@@ -95,13 +93,10 @@ export default {
     },
     cardDetails(id) {
       this.$store.commit("setCardId", id);
-      console.log(this.$store.state.cardData.id);
       this.$router.push({ name: "CardClicked" });
     },
     filterCards() {
-      console.log("filtered");
       if (this.$store.state.filter.location != "") {
-        console.log("location not empty");
         for (let x = 0; x < this.$store.state.allItemPersonCards.length; x++) {
           if (
             this.$store.state.allItemPersonCards[x].deliverTo ==
@@ -111,11 +106,10 @@ export default {
               this.$store.state.allItemPersonCards[x]
             );
           } else {
-            console.log("skipping unmatched location");
+            console.log("skip");
           }
         }
       } else {
-        console.log("location empty. Adding all");
         for (let i = 0; i < this.$store.state.allItemPersonCards.length; i++) {
           this.splicingItemPerson.push(this.$store.state.allItemPersonCards[i]);
         }
@@ -127,18 +121,12 @@ export default {
             this.splicingItemPerson[j].item.name ===
             this.$store.state.filter.item
           ) {
-            console.log("Item names matched");
-            console.log(this.splicingItemPerson[j].item.name);
             this.tempArray.push(this.splicingItemPerson[j]);
           } else {
-            console.log("item names does not match. skipping");
-            console.log(this.splicingItemPerson[j].item.name);
+            console.log("skip");
           }
         }
-        console.log("Array after name comparison");
-        console.log(this.splicingItemPerson);
       } else {
-        console.log("item name empty. tranferring all");
         for (let j = 0; j < this.splicingItemPerson.length; j++) {
           this.tempArray.push(this.splicingItemPerson[j]);
         }
@@ -151,13 +139,10 @@ export default {
             this.tempArray[k].person.type ===
             this.$store.state.filter.partnerType
           ) {
-            console.log("partnerType matched.");
-            console.log(this.tempArray[k].person.type);
             this.splicingItemPerson.push(this.tempArray[k]);
           }
         }
       } else {
-        console.log("partner type empty. tranferring all");
         for (let k = 0; k < this.tempArray.length; k++) {
           this.splicingItemPerson.push(this.tempArray[k]);
         }
@@ -172,48 +157,36 @@ export default {
             this.splicingItemPerson[m].price >=
               this.$store.state.filter.minPrice
           ) {
-            console.log("price range matched");
-            console.log(this.splicingItemPerson[m].price);
             this.tempArray.push(this.splicingItemPerson[m]);
           } else {
-            console.log("not in price range");
-            console.log(this.splicingItemPerson[m].price);
+            console.log("range");
           }
         }
-        console.log(this.tempArray);
       } else {
-        console.log("max price cannot be 0");
+        console.log("0");
       }
-      console.log("final array");
-      console.log(this.tempArray);
       for (let n = 0; n < this.tempArray.length; n++) {
         this.itemPerson.push(this.tempArray[n]);
       }
 
-      console.log("end of filtering");
     },
 
     showAllCards() {
-      console.log("no filtering. showing all");
       for (let i = 0; i < this.$store.state.allItemPersonCards.length; i++) {
         this.itemPerson.push(this.$store.state.allItemPersonCards[i]);
       }
     },
 
     checkStatus() {
-      console.log("Checking status...");
       if (this.$store.state.allItemPersonCards.length == 0) {
-        console.log("No data in the store. calling axios...");
         this.getAllCardsFromAxios();
       } else {
-        console.log("Data exists in the store. importing ...");
         if (this.$store.state.filter.filtered === false) {
             this.showAllCards();
           } else {
             this.filterCards();
           }
       }
-      console.log(this.$store.state.user.name + " logged in");
     },
     showAlert(){
       this.text = "Only premium members can view a person profile"
@@ -221,7 +194,6 @@ export default {
     }
   },
   mounted() {
-    console.log("mounted");
     this.checkStatus();
   },
 };
