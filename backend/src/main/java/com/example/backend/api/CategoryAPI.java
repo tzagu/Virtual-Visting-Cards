@@ -54,4 +54,10 @@ public class CategoryAPI {
     public ResponseEntity<Optional<Category>> findById(@PathVariable int id){
         return ResponseEntity.ok(categoryService.findById(id));
     }
+
+    @DeleteMapping("/deletecategory/{id}")
+    public ResponseEntity<Void> deleteById(@PathVariable int id){
+         categoryRepository.deleteById(id);
+         return ResponseEntity.noContent().build();
+    }
 }

@@ -60,6 +60,19 @@ public class PersonAPI {
         }
     }
 
+    @PutMapping("/addpartner/{id}")
+    public ResponseEntity<Person> addPartner(@RequestBody Person person, @PathVariable int id){
+        Optional<Person> thisPerson = personRepository.findById(id);
+        if(thisPerson.isPresent()){
+            Person thePerson = thisPerson.get();
+            thePerson.setDeals(person.getDeals());
+            return new ResponseEntity<>(personRepository.save(thePerson), HttpStatus.OK);
+        }
+        else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
     @GetMapping("/person")
     public ResponseEntity<List<Person>> findAll(){
         List<Person> personList = personService.findAll();
@@ -76,5 +89,11 @@ public class PersonAPI {
     public ResponseEntity findByEmail(@PathVariable String email){
         Person person = personService.findByEmail(email);
         return ResponseEntity.ok(person);
+    }
+
+    @DeleteMapping("/deleteperson/{id}")
+    public ResponseEntity<Void> deleteById(@PathVariable int id){
+        personRepository.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 }

@@ -92,9 +92,15 @@ const store = new Vuex.Store({
     },
 
   },
-  getters: {},
+  getters: {
+    reverseItems: state => {
+      return state.allItemPersonCards.slice().reverse();
+    }
+  },
   actions: {}
 })
+export default store;
+
 new Vue({
   el: '#app',
   router,
@@ -102,4 +108,6 @@ new Vue({
   components: { App },
   template: '<App/>',
   store,
+  VueSweetalert2,
 })
+

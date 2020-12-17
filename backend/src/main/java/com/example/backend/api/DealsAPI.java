@@ -2,6 +2,7 @@ package com.example.backend.api;
 
 
 import com.example.backend.models.Deals;
+import com.example.backend.repositories.DealsRepository;
 import com.example.backend.services.DealsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -20,6 +21,9 @@ public class DealsAPI {
     @Autowired
     DealsService dealsService;
 
+    @Autowired
+    DealsRepository dealsRepository;
+
     @PostMapping("/savedeal")
     public ResponseEntity<Deals> save(@Validated @RequestBody Deals deal){
         Deals deal1 = dealsService.save(deal);
@@ -35,5 +39,11 @@ public class DealsAPI {
     @GetMapping("/deal/{id}")
     public ResponseEntity<Optional<Deals>> findById(@PathVariable int id){
         return ResponseEntity.ok(dealsService.findById(id));
+    }
+
+    @DeleteMapping("/deletedeal/{id}")
+    public ResponseEntity<Void> deleteById(@PathVariable int id){
+        dealsRepository.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 }

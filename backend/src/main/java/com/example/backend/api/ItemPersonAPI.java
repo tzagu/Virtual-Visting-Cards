@@ -53,5 +53,24 @@ public class ItemPersonAPI {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+
+    @PutMapping("/adddeal/{id}")
+    public ResponseEntity<ItemPerson> addDeal(@RequestBody ItemPerson itemPerson, @PathVariable int id){
+        Optional<ItemPerson> thisItemPerson = itemPersonRepository.findById(id);
+        if(thisItemPerson.isPresent()){
+            ItemPerson theItemPerson = thisItemPerson.get();
+            theItemPerson.setDeals(itemPerson.getDeals());
+            return new ResponseEntity<>(itemPersonRepository.save(theItemPerson), HttpStatus.OK);
+        }
+        else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @DeleteMapping("/deleteitemperson/{id}")
+    public ResponseEntity<Void> deleteById(@PathVariable int id){
+        itemPersonRepository.deleteById(id);
+        return ResponseEntity.noContent().build();
+    }
 }
 

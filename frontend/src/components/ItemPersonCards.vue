@@ -97,21 +97,21 @@ export default {
     },
     filterCards() {
       if (this.$store.state.filter.location != "") {
-        for (let x = 0; x < this.$store.state.allItemPersonCards.length; x++) {
+        for (let x = 0; x < this.getReverseCards.length; x++) {
           if (
-            this.$store.state.allItemPersonCards[x].deliverTo ==
+            this.getReverseCards[x].deliverTo ==
             this.$store.state.filter.location
           ) {
             this.splicingItemPerson.push(
-              this.$store.state.allItemPersonCards[x]
+              this.getReverseCards[x]
             );
           } else {
-            console.log("skip");
+            console.log("");
           }
         }
       } else {
-        for (let i = 0; i < this.$store.state.allItemPersonCards.length; i++) {
-          this.splicingItemPerson.push(this.$store.state.allItemPersonCards[i]);
+        for (let i = 0; i < this.getReverseCards.length; i++) {
+          this.splicingItemPerson.push(this.getReverseCards[i]);
         }
       }
 
@@ -123,7 +123,7 @@ export default {
           ) {
             this.tempArray.push(this.splicingItemPerson[j]);
           } else {
-            console.log("skip");
+            console.log("");
           }
         }
       } else {
@@ -172,8 +172,8 @@ export default {
     },
 
     showAllCards() {
-      for (let i = 0; i < this.$store.state.allItemPersonCards.length; i++) {
-        this.itemPerson.push(this.$store.state.allItemPersonCards[i]);
+      for (let i = 0; i < this.getReverseCards.length; i++) {
+        this.itemPerson.push(this.getReverseCards[i]);
       }
     },
 
@@ -196,6 +196,11 @@ export default {
   mounted() {
     this.checkStatus();
   },
+  computed: {
+    getReverseCards(){
+      return this.$store.getters.reverseItems
+    }
+  }
 };
 </script>
 

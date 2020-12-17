@@ -1,6 +1,7 @@
 package com.example.backend.api;
 
 import com.example.backend.models.Item;
+import com.example.backend.repositories.ItemRepository;
 import com.example.backend.services.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -19,6 +20,9 @@ public class ItemAPI {
     @Autowired
     ItemService itemService;
 
+    @Autowired
+    ItemRepository itemRepository;
+
     @PostMapping("/saveitem")
     public ResponseEntity<Item> save(@Validated @RequestBody Item item){
         Item item1 = itemService.save(item);
@@ -34,5 +38,11 @@ public class ItemAPI {
     @GetMapping("/item/{id}")
     public ResponseEntity<Optional<Item>> findById(@PathVariable int id){
         return ResponseEntity.ok(itemService.findById(id));
+    }
+
+    @DeleteMapping("/deleteitem/{id}")
+    public ResponseEntity<Void> deleteById(@PathVariable int id){
+        itemRepository.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 }

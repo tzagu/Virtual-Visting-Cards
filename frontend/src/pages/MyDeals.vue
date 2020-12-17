@@ -15,6 +15,12 @@
             max-width="300px"
             class="ma-4"
           >
+            <v-card-title>
+              <v-spacer></v-spacer>
+              <v-btn icon color="#36213e">
+              <v-icon> mdi-delete </v-icon>
+              </v-btn>
+            </v-card-title>
             <v-list-item three-line>
               <v-list-item-content>
                 <div class="overline mb-4">Brand: {{ card.brand }}</div>
@@ -32,7 +38,6 @@
                 }}</v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>
-            
           </v-card>
         </v-row>
       </v-col>
@@ -126,23 +131,20 @@ export default {
       //   },
       // ],
       myCardList: [],
-
     };
   },
   mounted() {
-      for (let i = 0; i < this.$store.state.allItemPersonCards.length; i++) {
-        if (this.$store.state.allItemPersonCards[i].person != null) {
-          if (
-            this.$store.state.allItemPersonCards[i].person.id ===
-            this.$store.state.user.id
-          ) {
-            this.myCardList.push(this.$store.state.allItemPersonCards[i]);
-          }
+    for (let i = 0; i < this.$store.state.allItemPersonCards.length; i++) {
+      if (this.$store.state.allItemPersonCards[i].person != null) {
+        if (
+          this.$store.state.allItemPersonCards[i].person.id ===
+          this.$store.state.user.id
+        ) {
+          this.myCardList.push(this.$store.state.allItemPersonCards[i]);
         }
       }
+    }
   },
-
-
 };
 </script>
 

@@ -290,6 +290,7 @@ export default {
     dialog2: false,
     dialog3: false,
     itemperson: {
+      personId: 0,
       personName: "YMS Upeksha",
       status: " ",
       date: "01/10/2020",
@@ -303,6 +304,8 @@ export default {
       profileRate: 0,
       compareCardRating: 0, //current rate of the card. before leaving page, card rating will be compared to this and if different, new value is posted
     },
+    responseItemPersonArr: [],
+    responsePersonArr: [],
   }),
   methods: {
     sendMail() {
@@ -311,7 +314,48 @@ export default {
         replyTo: this.userEmail,
         subject: this.subject,
         text: this.emailBody,
-      }).catch((error) => {
+      }).then((response) => {
+        Axios.post("/savedeal", {
+          //get newly created deal
+        }).then((responseDeal) => {
+          //get deals of itemperson
+          Axios.get("/itemperson/"+ this.$store.state.cardData.id).then((responseItemPerson) => {
+            for(let i = 0; i < responseItemPerson.data.deals.length; i++){
+              this.responseItemPersonArr.push(responseItemPerson.data.deals[i])
+            }
+          //add new deal id
+            this.responseItemPersonArr.push(responseDeal)
+          //PUT updated array
+          Axios.put("/adddeal/"+ this.$store.state.cardData.id, {
+            deals: this.responseItemPersonArr
+          }).catch((error) => {
+            console.log(error)
+          })
+          }).catch((error) => {
+            console.log(error)
+          })
+          //get deals of person
+          Axios.get("/all/" + this.itemperson.personId).then((responsePerson) => {
+            for(let n = 0; n < responsePerson.data.deals.length; n++){
+              this.responsePersonArr.push(responsePerson.data.deals[n])
+            }
+          //add new deal id
+            this.responsePersonArr.push(responseDeal)
+          }).catch((error) => {
+            console.log(error)
+          })
+          //PUT updated array
+          Axios.put("/addpartner/"+ this.itemperson.personId, {
+            deals: this.responsePersonArr
+          }).catch((error) => {
+            console.log(error)
+          })
+        }).catch((error) => {
+            console.log(error)
+          })
+      })
+      
+      .catch((error) => {
         console.log(error);
       });
 
@@ -326,6 +370,7 @@ export default {
     this.selectedCardId = this.$store.state.cardData.id;
     Axios.get("/itemperson/" + this.selectedCardId)
       .then((response) => {
+        this.itemperson.personId = response.data.person.id
         this.itemperson.itemName = response.data.item.name;
         this.itemperson.price = response.data.price;
         this.itemperson.location = response.data.deliverTo;

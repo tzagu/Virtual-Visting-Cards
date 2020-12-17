@@ -27,6 +27,7 @@
             >
           </form>
         </v-card-text>
+      </v-card>
     </v-col>
         <v-snackbar
     :value="snackbar"

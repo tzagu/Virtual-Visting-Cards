@@ -41,9 +41,6 @@ public class Person {
     private String address;
 
     @Column
-    private int dealCount;
-
-    @Column
     private String status;
 
     @Column
@@ -52,17 +49,10 @@ public class Person {
     @Column
     private String type;
 
-//    @OneToMany(cascade = CascadeType.ALL, targetEntity = ItemPerson.class)
-//    @JoinColumn(name = "personId", referencedColumnName = "id")
-//    private List<ItemPerson> itemPersonList = new ArrayList<>();
-
     @OneToMany(cascade = CascadeType.ALL, targetEntity = Deals.class)
-    @JoinColumn(name = "sellerdeal", referencedColumnName = "id")
-    private List<Deals> person1 = new ArrayList<>();
+    @JoinColumn(name = "partnerId", referencedColumnName = "id")
+    private List<Deals> deals = new ArrayList<>();
 
-    @OneToMany(cascade = CascadeType.ALL, targetEntity = Deals.class)
-    @JoinColumn(name = "buyerdeal", referencedColumnName = "id")
-    private List<Deals> person2 = new ArrayList<>();
 
     public Person() {
     }
@@ -74,7 +64,7 @@ public class Person {
         this.name = name;
     }
 
-    public Person(int id, String name, String mobile1, String mobile2, String landLine, Date joinedDate, String email, String password, String address, int dealCount, String status, int rating, String type, List<Deals> person1, List<Deals> person2) {
+    public Person(int id, String name, String mobile1, String mobile2, String landLine, Date joinedDate, String email, String password, String address, String status, int rating, String type, List<Deals> deals) {
         this.id = id;
         this.name = name;
         this.mobile1 = mobile1;
@@ -84,12 +74,10 @@ public class Person {
         this.email = email;
         this.password = password;
         this.address = address;
-        this.dealCount = dealCount;
         this.status = status;
         this.rating = rating;
         this.type = type;
-        this.person1 = person1;
-        this.person2 = person2;
+        this.deals = deals;
     }
 
     public int getId() {
@@ -156,28 +144,12 @@ public class Person {
         this.password = password;
     }
 
-//    public List<ItemPerson> getItemPersonList() {
-//        return itemPersonList;
-//    }
-//
-//    public void setItemPersonList(List<ItemPerson> itemPersonList) {
-//        this.itemPersonList = itemPersonList;
-//    }
-
-    public List<Deals> getPerson1() {
-        return person1;
+    public List<Deals> getDeals() {
+        return deals;
     }
 
-    public void setPerson1(List<Deals> person1) {
-        this.person1 = person1;
-    }
-
-    public List<Deals> getPerson2() {
-        return person2;
-    }
-
-    public void setPerson2(List<Deals> person2) {
-        this.person2 = person2;
+    public void setDeals(List<Deals> deals) {
+        this.deals = deals;
     }
 
     public String getAddress() {
@@ -186,14 +158,6 @@ public class Person {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public int getDealCount() {
-        return dealCount;
-    }
-
-    public void setDealCount(int dealCount) {
-        this.dealCount = dealCount;
     }
 
     public String getStatus() {
