@@ -74,7 +74,7 @@
                       <a
                       class="grey--text"
                         target="_blank"
-                        href="https://tzaguyapa.blogspot.com/2017/01/the-best-way-to-have-best-on-your.html"
+                        href="src/pages/UserAgreement.vue"
                         @click.stop
                         v-on="on"
                       >
@@ -89,7 +89,7 @@
                       <a
                       class="grey--text"
                         target="_blank"
-                        href="https://tzaguyapa.blogspot.com/2017/01/the-best-way-to-have-best-on-your.html"
+                        href="src/pages/PrivacyPolicy.vue"
                         @click.stop
                         v-on="on"
                       >

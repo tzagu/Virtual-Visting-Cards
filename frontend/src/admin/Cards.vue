@@ -55,7 +55,10 @@
                   </v-row>
               </v-card-title>
               <v-card-text>
-                  <!-- consume other data from cards here -->
+                <v-row>Brand-{{cards.brand}}</v-row>
+                  <v-row>Item-{{cards.item.name}}</v-row>
+                  <v-row>Date-{{cards.date}}</v-row>
+                  <v-row>Price-{{cards.price}}</v-row>
               </v-card-text>
             </v-card>   
           </v-col>

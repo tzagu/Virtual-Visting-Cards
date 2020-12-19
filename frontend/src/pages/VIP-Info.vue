@@ -3,7 +3,7 @@
     <v-row class="fill-height" align="center" justify="center">
       <!-- <v-col cols="12" sm="8" md="4"> -->
       <v-sheet elevation="12" class="pa-6 vip" rounded>
-        <v-row>
+        <v-row class="pt-2">
           <v-col class="text-center">
             <h1>VIP Tier</h1>
             <h3 class="mb-4">for premium members only</h3>

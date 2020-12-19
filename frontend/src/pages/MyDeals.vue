@@ -17,7 +17,7 @@
           >
             <v-card-title>
               <v-spacer></v-spacer>
-              <v-btn icon color="#36213e">
+              <v-btn icon color="#36213e" @click="deleteCard(card.id)">
               <v-icon> mdi-delete </v-icon>
               </v-btn>
             </v-card-title>
@@ -76,6 +76,7 @@
 </template>
 
 <script>
+import Axios from 'axios'
 export default {
   data() {
     return {
@@ -133,6 +134,16 @@ export default {
       myCardList: [],
     };
   },
+  methods:{
+    deleteCard(id){
+      Axios.delete("/deleteitemperson/" + id).then((response) => {
+        this.$swal("Deleted!", "It may take a while to update your changes.", {buttons: false})
+      }).catch((error) => {
+        console.log(error)
+      })
+    }
+  },
+
   mounted() {
     for (let i = 0; i < this.$store.state.allItemPersonCards.length; i++) {
       if (this.$store.state.allItemPersonCards[i].person != null) {
