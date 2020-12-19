@@ -44,6 +44,20 @@ public class CategoryAPI {
         }
     }
 
+    @PutMapping("/savecategorybyname/{name:.+}")
+    public ResponseEntity<Category> updateCategoryByName(@RequestBody Category category, @PathVariable String name){
+        Optional<Category> thisCategory = categoryService.findByName(name);
+        if(thisCategory.isPresent()){
+            Category theCategory = thisCategory.get();
+            theCategory.setName(category.getName());
+            theCategory.setItems(category.getItems());
+            return new ResponseEntity<>(categoryRepository.save(theCategory), HttpStatus.OK);
+        }
+        else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
     @GetMapping("/categories")
     public ResponseEntity<List<Category>> findAll(){
         List<Category> categoryList = categoryService.findAll();

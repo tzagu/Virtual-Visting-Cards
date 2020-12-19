@@ -323,6 +323,11 @@ export default {
            item: {
              id: this.id},
         }).then((response) => {
+          Axios.put("/updateactivity/" + this.$store.state.user.email,{
+              activity: "Card"
+            }).catch((error) => {
+              console.log(error)
+            })
           this.$swal("Done! ", "Your business cards has been added", "success", {timer: 3000,});
           })
           .catch((error) => {
@@ -395,6 +400,7 @@ export default {
           this.obj.ids = this.itemIds;
           this.itemIds = [];
           this.obj.cat = this.dataSet[i].name;
+          this.obj.id = this.dataSet[i].id;
           this.$store.commit("setCategoryItems", this.obj)
           this.categorisedItems.push(this.obj);
           this.obj = {};

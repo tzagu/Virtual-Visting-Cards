@@ -11,7 +11,7 @@
     <v-btn @click.prevent="showFilter" icon v-bind="attrs"
           v-on="on">
       <v-icon>mdi-tune</v-icon>
-    </v-btn>
+    </v-btn> 
     </template>
       <span>Filter</span>
     </v-tooltip>
@@ -93,7 +93,7 @@ export default {
 
     //show add items and category page
     addItem(){
-      this.$router.push({name: "AddItems"})
+      this.$router.push({name: "AdminHome"})
     },
 
     isLoggedIn(){

@@ -77,11 +77,11 @@
                 than 12 months
               </li>
               <li>
-                Successfully <u @click="contacted()">contacted</u> more than 12 different partners through B Card
+                Successfully <u @click="contacted()">contacted</u> more than 24 different partners through B Card
                 platform
               </li>
               <li>
-                Has been <u @click="contacted()">contacted</u> by more than 12 different partners through your
+                Has been <u @click="contacted()">contacted</u> by more than 16 different partners through your
                 existing B cards
               </li>
               <li>
@@ -117,7 +117,7 @@ export default {
     fee() {
       this.$swal(
         "subscription:",
-        "You can get a VIP subscription as a wild card by paying $12 along with having met one of the other requirements listed",
+        "You can get a VIP subscription as a wild card by paying $45 along with having met one of the other requirements listed",
         { buttons: false }
       );
     },

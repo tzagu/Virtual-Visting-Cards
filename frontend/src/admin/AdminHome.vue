@@ -1,5 +1,5 @@
 <template>
-<v-row align="center" justify="center" class="fill-height">
+<v-row align="center" justify="center" class="fill-height mt-6">
     <v-col>
     <v-sheet class="AdminHome">
         <v-tabs v-model="text" fixed-tabs>

@@ -9,7 +9,6 @@ import CardClicked from '@/pages/CardClicked.vue'
 import MyDeals from '@/pages/MyDeals.vue'
 import ContactUs from '@/components/ContactUs.vue'
 import EditProfile from '@/pages/EditProfile.vue'
-import AddItems from '@/admin/AddItems.vue'
 import GetVip from '@/pages/GetVip.vue'
 import ForgotPassword from '@/pages/ForgotPassword.vue'
 import ResetForm from '@/pages/bcard-pwr-secure/eb-caroli-resetvalidate/user-form.vue'
@@ -97,15 +96,6 @@ const router = new Router({
       }
     },
     {
-      path: '/additems',
-      name: 'AddItems',
-      component: AddItems,
-      meta: {
-        allowAnonymous: false,
-        requireAdmin: true
-      }
-    },
-    {
       path: '/getvip',
       name: 'GetVip',
       component: GetVip,
@@ -169,8 +159,11 @@ router.beforeEach((to, from, next) => {
   }
   else{
     if(!to.meta.allowAnonymous){
-      if(!store.state.user.email){
+      if(store.state.user.email == ""){
         next("/login")
+      }
+      else{
+        next()
       }
     }
     else{

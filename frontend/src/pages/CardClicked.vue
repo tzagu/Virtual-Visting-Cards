@@ -333,7 +333,12 @@ export default {
           })
           }).catch((error) => {
             console.log(error)
-          })
+          });
+          Axios.put("/updateactivity/" + this.$store.state.user.email,{
+              activity: "Card"
+            }).catch((error) => {
+              console.log(error)
+            })
           //get deals of person
           Axios.get("/all/" + this.itemperson.personId).then((responsePerson) => {
             for(let n = 0; n < responsePerson.data.deals.length; n++){

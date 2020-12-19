@@ -32,4 +32,8 @@ public class CategoryService {
     public Optional<Category> findById(@PathVariable int id){
         return categoryRepository.findById(id);
     }
+
+    public Optional<Category> findByName(String name){
+        return categoryRepository.findByName(name);
+    }
 }

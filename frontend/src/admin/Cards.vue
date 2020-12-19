@@ -75,80 +75,34 @@ export default {
     return {
       searchBy: "",
       daterange: [],
-      cards: [
-        {
-          id: 0,
-          date: "2020-12-18",
-          brand: "brand",
-          deliverTo: "deliverTo",
-          quantity: "quantity",
-          price: 23.02,
-          rating: 4,
-          deals: [{ id: 1, date: "2020-12-08" },{ id: 2, date: "2020-09-08" }],
-          item: { id: 1, name: "item name" },
-          person: {
-            id: 2,
-            name: "tzagu",
-            mobile1: "mobile 1",
-            joinedDate: "2020-18-02",
-            email: "tzaguyapa@gmail.com",
-            status: "newbie",
-            rating: 3,
-            type: "Buyer",
-            deals: [{ id: 5, date: "1292-09-12" }, { id: 7, date: "2020-09-12" }],
-          },
-        },
-        {
-          id: 0,
-          date: "2020-12-18",
-          brand: "brand",
-          deliverTo: "deliverTo",
-          quantity: "quantity",
-          price: 23.02,
-          rating: 4,
-          deals: [{ id: 1, date: "2020-12-08" },{ id: 2, date: "2020-09-08" }],
-          item: { id: 1, name: "item name" },
-          person: {
-            id: 2,
-            name: "tzagu",
-            mobile1: "mobile 1",
-            joinedDate: "2020-18-02",
-            email: "tzaguyapa@gmail.com",
-            status: "newbie",
-            rating: 3,
-            type: "Buyer",
-            deals: [{ id: 5, date: "1292-09-12" }, { id: 7, date: "2020-09-12" }],
-          },
-        },
-        {
-          id: 0,
-          date: "2020-12-18",
-          brand: "brand",
-          deliverTo: "deliverTo",
-          quantity: "quantity",
-          price: 23.02,
-          rating: 4,
-          deals: [{ id: 1, date: "2020-12-08" },{ id: 2, date: "2020-09-08" }],
-          item: { id: 1, name: "item name" },
-          person: {
-            id: 2,
-            name: "tzagu",
-            mobile1: "mobile 1",
-            joinedDate: "2020-18-02",
-            email: "tzaguyapa@gmail.com",
-            status: "newbie",
-            rating: 3,
-            type: "Buyer",
-            deals: [{ id: 5, date: "1292-09-12" }, { id: 7, date: "2020-09-12" }],
-          },
-        },
-      ],
+      cards: [],
     };
   },
   methods: {
-    searchByEmail() {},
-    searchByName() {},
-    searchByDateRange() {},
+    searchByEmail() {
+      this.cards = []
+      for(let i = 0; i < this.$store.state.allItemPersonCards.length; i++){
+        if(this.$store.state.allItemPersonCards[i].person.email === this.searchBy){
+          this.cards.push(this.$store.state.allItemPersonCards[i])
+        }
+      }
+    },
+    searchByName() {
+      this.cards = []
+      for(let i = 0; i < this.$store.state.allItemPersonCards.length; i++){
+        if(this.$store.state.allItemPersonCards[i].person.name === this.searchBy){
+          this.cards.push(this.$store.state.allItemPersonCards[i])
+        }
+      }
+    },
+    searchByDateRange() {
+      this.cards = []
+      for(let i = 0; i < this.$store.state.allItemPersonCards.length; i++){
+        if(this.$store.state.allItemPersonCards[i].date >= this.daterange[0] && this.$store.state.allItemPersonCards[i].date <= this.daterange[1]){
+          this.cards.push(this.$store.state.allItemPersonCards[i])
+        }
+      }
+    },
   },
 };
 </script>

@@ -201,6 +201,13 @@ export default {
                 name: this.name,
               })
               .then((response) => {
+                axios.post("/addactivity", {
+                  email: this.email,
+                  personId: response.data.id,
+                  activity: "Signup"
+                }).catch((error) => {
+                  console.log(error)
+                })
                 this.$swal({ icon: "success", timer: 3000 });
                 this.$router.push({ name: "Login" });
               })

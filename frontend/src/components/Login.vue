@@ -122,6 +122,11 @@ export default {
             this.password === response.data.password
           ) {
             this.$store.commit("setUser", response.data);
+            Axios.put("/updateactivity/" + this.email,{
+              activity: "Login"
+            }).catch((error) => {
+              console.log(error)
+            })
             this.$router.push({ name: "ItemPersonCards" });
           } else {
             this.snackbar = true
