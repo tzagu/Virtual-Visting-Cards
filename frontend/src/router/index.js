@@ -16,6 +16,8 @@ import Tour from '@/pages/Tour.vue'
 import VIPInfo from '@/pages/VIP-Info'
 import AdminHome from '@/admin/AdminHome'
 import store from "@/main.js"
+import PrivacyPolicy from "../pages/PrivacyPolicy.vue"
+import UserAgreement from "../pages/UserAgreement.vue"
 
 
 Vue.use(Router)
@@ -43,6 +45,22 @@ const router = new Router({
       path: '/login',
       name: 'Login',
       component: Login,
+      meta: {
+        allowAnonymous: true
+      }
+    },
+    {
+      path: '/privacypolicy',
+      name: 'PrivacyPolicy',
+      component: PrivacyPolicy,
+      meta: {
+        allowAnonymous: true
+      }
+    },
+    {
+      path: '/useragreement',
+      name: 'UserAgreement',
+      component: UserAgreement,
       meta: {
         allowAnonymous: true
       }

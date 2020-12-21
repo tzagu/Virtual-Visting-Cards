@@ -1,39 +1,42 @@
 <template>
   <v-container>
     <v-row class="fill-height" align="center" justify="center">
-      <v-sheet elevation="12" class="pa-6 vip" rounded>
-        <v-row class="pt-2">
-          <v-col class="text-center">
+      <v-sheet elevation="12" class="pa-4 vip" rounded max-width="800px">
+        <v-row class="pa-2">
+          <v-col class="text-center px-10">
             <h1>Privacy policy</h1>
 
-            B Card is a service by Linetco Technology Solutions
-            By signing up for this service, you(User) declare that you are aware, have read and understood the privacy policy of B Card set forth below.
+            <p> B Card is a service by Linetco Technology Solutions</p>
+            <p> By signing up for this service, you(User) declare that you are aware, have read, understood and agree to proceed with the privacy policy of B Card set forth below. </p>
 
-            What we store
-            email address, ....(state all)
+            <h4> What does B Card store?</h4>
+            <li> When user signup, </li>
+             <li>User name, email address, password for the B Card account.
+             <li> When user creates a business profile,</li>
+             <li>Physical location (as home address or workplace address),
+             Contact numbers.
+             Additionaly, the information user choose to add when creating user's products profile.(Product name, brand name, product price, delivery locations, available quantity, etc)</li>
 
-            How it is used
-            email addresses are not shown to the public. however will be used to send emails to the user.
-            state what we do with other attributes...
+            <h4> How is it used? </h4>  
+            <li> User email addresses are not visible to the public. However, when a user send a "contact me" email to a partner(another user), this user's email address will be exposed in order for the partner to contact user directly. </li>
+            <li>User can choose to add/not add mobile numbers (preferably work numbers). If added, those numbers will be available for the viewers to contact users via phone calls.</li>
+            <li>All data uploaded in the "business profile" of the user can be viewed by the public at different scenarios and different tiers. Users can make the decision to add or not add their preferred information. </li>
+            <li>B Card can use user email address to send B Card policy updates, notices and urgent/important messages.</li>
+            <li>B Card can use user email address to send any promotional material. User can request to avoid sending promotional material if preferred.</li>
+            <p>B Card does not disclose or sell any user information to 3rd parties.</p>
+            
+            <li>B Card may temporarily store some data in user hardware while browsing B Card web application to give user an optimum app experience. Such data will be immediately removed when the user exits the window.</li>
+            <li>B Card has taken maximum measures to ensure the privacy and safety of user information. But in an unavoidable incident of a data breach, user should understand and agree that, no space in the internet is entirely secure and safe.</li>
 
-            B Card may temporarily store some data in your window storage to in certain situations to give user an optimum usage experience. Such data will be immediately removed when the user exits the window and no longer will be there
-            B Card can use your email address to send any updates related to privacy policy or new user agreements
-            We can use your email address to send any promotional material and you are okay with that
-            Other users can see some(explain) of the information you provide and also can use some of the information to contact you(email, phone numbers etc) and you are okay with that
-            we do not disclose or sell these information to any 3rd party, but the public can see what is shown in the site
-            say what happens in the dashboard
-            -what data we use
-            -for what purposes we use them
-            -and you are safe
-            we have taken maximum measures to ensure the privacy and safety of your information. But incase of a breach, you understand and agree that we do not take responsibility for that
-            we can change/update privacy policy and terms of use and we will immediately inform you about it via the email address you provided
-            For children within "minor" category of the resident location/country, we recommend being advised by an adult before providing data. we treat them equaly and if something happened, we dont know
-            if you have any concerns regarding privacy policy violation or whatsoever, you should first contact us. then we will take immediate action to resolve it
-            during and ownership transfer, we will let you know
-            contact info:
+            <li>B Card can update privacy policy and terms of use. In such situations, users will be informed via email.</li>
+            <li>For children within "minor" category of the resident's location/country, we recommend being advised by an adult before providing data. B Card treats all users equally and it is the user's sole responsibility to adhere to applicable laws.</li>
+            <li>If a user has any concerns regarding another user's fraud behavior, privacy policy violation or problems about B Card privacy policy and user agreement, user should first make B Card aware of it by conacting B Card. B Card will take immediate actions to resolve any problems and answer user questions.</li>
+            <li>During an ownership transference, the privacy policy may also update according to the new panel. Prior to that, B Card will inform users via email to stay updated with the upcoming changes.</li>
+            <li> <a href="#/contactus" class="grey--text"> contact us </a></li>
             
 
-            Refered as "User" is the user signin up for the service
+            <li>Refered as "User" is the user signing up for the service.</li>
+            <li> Refered as "B Card" is the platform application owned by Linetco Technology Solutions.</li>
           </v-col>
         </v-row>
       </v-sheet>
@@ -48,5 +51,18 @@ export default {
 </script>
 
 <style>
-
+h1{
+  color:grey;
+}
+h4{
+  text-align: left;
+  
+}
+p{
+  text-align: left;
+}
+li{
+  text-align: justify;
+  list-style: none;
+}
 </style>

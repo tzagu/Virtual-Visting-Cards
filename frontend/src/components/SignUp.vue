@@ -74,7 +74,7 @@
                       <a
                       class="grey--text"
                         target="_blank"
-                        href="src/pages/UserAgreement.vue"
+                        href="#/useragreement"
                         @click.stop
                         v-on="on"
                       >
@@ -89,7 +89,7 @@
                       <a
                       class="grey--text"
                         target="_blank"
-                        href="src/pages/PrivacyPolicy.vue"
+                        href="#/privacypolicy"
                         @click.stop
                         v-on="on"
                       >

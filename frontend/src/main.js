@@ -7,7 +7,6 @@ import vuetify from '@/plugins/vuetify'
 import Vuex from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
 import VueSweetalert2 from 'vue-sweetalert2'
-import 'sweetalert2/dist/sweetaler2.min.css'
 
 Vue.use(Vuex);
 Vue.use(VueSweetalert2);
