@@ -13,7 +13,7 @@
               <li>Auto generated profile ID</li>
               <p>
                 Sharing a business card and asking your clients to call that
-                number is no more the trend. B Card VIP issues you a unique QR
+                number is no more the trend. B Raymerge VIP issues you a unique QR
                 code which anyone can scan and directly access your profile.
                 This will also be automatically added to their saved cards
                 lists.
@@ -57,9 +57,9 @@
                 Only premium members can view other cards posted by the same
                 person of a selected card.
               </p>
-              <li>Attend B Card VIP community conferences</li>
+              <li>Attend B Raymerge VIP community conferences</li>
               <p>
-                We, B Card platform hosts conferences annually, networking with
+                We, B Raymerge platform hosts conferences annually, networking with
                 top business profiles and sharing knowledge with a cup of
                 coffee. Premium members has the opportunity to be selected as
                 the new joiners, opening up many doors of immense value to learn
@@ -73,19 +73,19 @@
             </h3>
             <ul class="text-left">
               <li>
-                Has been an <u @click="active">active</u> B Card user for more
+                Has been an <u @click="active">active</u> Raymerge user for more
                 than 12 months
               </li>
               <li>
-                Successfully <u @click="contacted()">contacted</u> more than 24 different partners through B Card
+                Successfully <u @click="contacted()">contacted</u> more than 24 different partners through B Raymerge
                 platform
               </li>
               <li>
                 Has been <u @click="contacted()">contacted</u> by more than 16 different partners through your
-                existing B cards
+                existing Raymerge cards
               </li>
               <li>
-                Successfully registered to B Card VIP
+                Successfully registered to B Raymerge VIP
                 <u @click="fee">subscription</u>
               </li>
               <li>
@@ -122,7 +122,7 @@ export default {
       );
     },
     contacted(){
-        this.$swal("contacted:", "Contacted via E-MAIL through B Card platform.", {buttons: false})
+        this.$swal("contacted:", "Contacted via E-MAIL through B Raymerge platform.", {buttons: false})
     }
   },
 };

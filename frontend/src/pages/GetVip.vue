@@ -3,7 +3,7 @@
     <v-row class="fill-height" align="center" justify="center">
       <v-row>
         <v-col class="text-center gradiant ma-2 pa-2" cols="12">
-          <h1 class="mb-4 white--text">VIP B Cards</h1>
+          <h1 class="mb-4 white--text">Raymerge VIP</h1>
           <h3 class="subheading white--text">
             Great Day {{ this.$store.state.user.name }} !
           </h3>
