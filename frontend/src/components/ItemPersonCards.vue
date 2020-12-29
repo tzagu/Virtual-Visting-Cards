@@ -71,7 +71,7 @@ export default {
         .get("/itempersoncards")
         .then((response) => {
           if(response.data.length == 0){
-            this.text = "No data for your filter"
+            this.text = "No data"
             this.snackbar = true
           }
           else{

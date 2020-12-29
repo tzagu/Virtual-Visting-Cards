@@ -146,6 +146,11 @@ export default {
             console.log(error)
           })
         },
+    },
+    mounted(){
+      Axios.get("/person").then((response) => {
+        this.personCount = response.data.length
+      })
     }
 
 }

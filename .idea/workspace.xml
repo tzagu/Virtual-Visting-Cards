@@ -33,26 +33,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bc1d272-ce2b-400e-9617-cef7eef9282f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/testing/src/testing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/api/ActivityApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/api/ActivityApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/public/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/admin/Persons.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/admin/Persons.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ItemPersonCards.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ItemPersonCards.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/SignUp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SignUp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Filter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Filter.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/GetVip.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/GetVip.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/PrivacyPolicy.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/PrivacyPolicy.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/UserAgreement.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/UserAgreement.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/VIP-Info.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/VIP-Info.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.9dbbe2745349e21dc43f9ef0cd22a2f6.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/css/app.9dbbe2745349e21dc43f9ef0cd22a2f6.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/img/1598971.9cf36bc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.a6c4df4a26db9eb264bf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.a6c4df4a26db9eb264bf.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/vendor.2e5dadaf4b643d6b18b5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/vendor.2e5dadaf4b643d6b18b5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/frontend-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.7b31856af2fb9a5d9a9d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/app.7b31856af2fb9a5d9a9d.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/dist/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/frontend-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/frontend-0.0.1-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,26 +135,18 @@
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="795" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/54.27.1866.1053@54.27.1866.1053" timestamp="1608340316196" />
-    <state x="745" y="335" width="524" height="451" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1599727480160">
-      <screen x="54" y="27" width="1866" height="1053" />
-    </state>
-    <state x="745" y="335" width="524" height="451" key="#com.intellij.ide.util.PackageChooserDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1599727480160" />
-    <state x="531" y="478" width="973" height="158" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1599728357318">
-      <screen x="54" y="27" width="1866" height="1053" />
-    </state>
-    <state x="531" y="478" width="973" height="158" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1599728357318" />
     <state x="740" y="421" width="494" height="279" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1607683576597">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="740" y="421" width="494" height="279" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/54.27.1866.1053@54.27.1866.1053" timestamp="1607683576597" />
-    <state x="740" y="435" width="544" height="244" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1599728359599">
-      <screen x="54" y="27" width="1866" height="1053" />
-    </state>
-    <state x="740" y="435" width="544" height="244" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/54.27.1866.1053@54.27.1866.1053" timestamp="1599728359599" />
     <state x="604" y="246" width="924" height="691" key="Maven.ArtifactSearchDialog" timestamp="1607625430551">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="604" y="246" width="924" height="691" key="Maven.ArtifactSearchDialog/54.27.1866.1053@54.27.1866.1053" timestamp="1607625430551" />
+    <state x="296" y="155" width="1372" height="803" key="new project wizard" timestamp="1608777168930">
+      <screen x="54" y="27" width="1866" height="1053" />
+    </state>
+    <state x="296" y="155" width="1372" height="803" key="new project wizard/54.27.1866.1053@54.27.1866.1053" timestamp="1608777168930" />
     <state x="677" y="311" width="610" height="492" key="refactoring.ChangeSignatureDialog" timestamp="1602712337638">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
@@ -165,10 +155,10 @@
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
     <state x="651" y="252" key="run.anything.popup/54.27.1866.1053@54.27.1866.1053" timestamp="1602705052849" />
-    <state x="650" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1606765230652">
+    <state x="650" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1608993441095">
       <screen x="54" y="27" width="1866" height="1053" />
     </state>
-    <state x="650" y="259" width="672" height="678" key="search.everywhere.popup/54.27.1866.1053@54.27.1866.1053" timestamp="1606765230652" />
+    <state x="650" y="259" width="672" height="678" key="search.everywhere.popup/54.27.1866.1053@54.27.1866.1053" timestamp="1608993441095" />
   </component>
   <component name="XPathView.XPathProjectComponent">
     <history />

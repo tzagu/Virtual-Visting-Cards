@@ -78,7 +78,7 @@ export default {
       item: "",
       partnerType: "",
       min: 0,
-      max: 10000,
+      max: 9999999,
       slider: 40,
       range: [0, 500],
       locations: [

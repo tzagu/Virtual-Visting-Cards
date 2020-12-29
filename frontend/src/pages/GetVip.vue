@@ -10,7 +10,7 @@
           <h4 class="subtitle-1 white--text mb-4">
             You are currently not eligible for this tier
           </h4>
-          <h4 class="subtitle-1 white--text mb-4">
+          <h4 class="subtitle-1 white--text mb-4 text-center">
             <a href="#/vip" class="white--text">Learn more</a>
           </h4>
         </v-col>

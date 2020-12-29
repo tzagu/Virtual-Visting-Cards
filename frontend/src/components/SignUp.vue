@@ -145,6 +145,8 @@ export default {
     confirmpassword: "",
     name: "",
     checkbox: false,
+    activity: "Signup",
+    addActivity: {}
   }),
 
   methods: {
@@ -201,11 +203,11 @@ export default {
                 name: this.name,
               })
               .then((response) => {
-                axios.post("/addactivity", {
-                  email: this.email,
-                  personId: response.data.id,
-                  activity: "Signup"
-                }).catch((error) => {
+                let personId = response.data.id
+                this.addActivity.personId = personId,
+                this.addActivity.activity = this.activity,
+                this.addActivity.email = this.email,
+                axios.post("/addactivity", this.addActivity).catch((error) => {
                   console.log(error)
                 })
                 this.$swal({ icon: "success", timer: 3000 });

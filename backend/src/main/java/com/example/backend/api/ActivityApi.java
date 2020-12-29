@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,7 +26,7 @@ public class ActivityApi {
     }
 
     @PostMapping("/addactivity")
-    public ResponseEntity<Activity> saveActivity(Activity activity){
+    public ResponseEntity<Activity> saveActivity(@Validated @RequestBody Activity activity){
         Activity activity1 = activityRepository.save(activity);
         return new ResponseEntity<>(activity1,new HttpHeaders(), HttpStatus.OK);
     }
